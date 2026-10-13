@@ -1,0 +1,95 @@
+{
+  "layout": {
+    "id": 21401,
+    "actionId": 20401,
+    "action": null,
+    "name": "Тема заказа",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 26000,
+      "name": "Тема заказа",
+      "alias": "order-theme-root",
+      "spaceType": "tab",
+      "spaceRole": "input",
+      "fields": [],
+      "children": [
+        {
+          "id": 26001,
+          "name": "Параметры",
+          "alias": "order-theme-params",
+          "spaceType": "card",
+          "spaceRole": "input",
+          "fields": [
+            {
+              "name": "field_ot_card_1",
+              "caption": "Код",
+              "fieldType": "string",
+              "columnNumber": 1,
+              "attributeMapping": "code"
+            },
+            {
+              "name": "field_ot_card_2",
+              "caption": "Название",
+              "fieldType": "string",
+              "columnNumber": 2,
+              "attributeMapping": "name"
+            },
+            {
+              "name": "field_ot_card_3",
+              "caption": "Статус",
+              "fieldType": "dropDown",
+              "columnNumber": 3,
+              "valuesList": [
+                "Активна",
+                "Архив"
+              ],
+              "attributeMapping": "status"
+            }
+          ],
+          "children": [],
+          "sortOrder": 1
+        }
+      ],
+      "sortOrder": 1
+    }
+  ],
+  "values": [
+    {
+      "fieldName": "field_ot_card_1",
+      "value": "ГОЗ",
+      "meta": {
+        "caption": "Код",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_ot_card_2",
+      "value": "ГОЗ (гособоронзаказ)",
+      "meta": {
+        "caption": "Название",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_ot_card_3",
+      "value": "Активна",
+      "meta": {
+        "caption": "Статус",
+        "fieldType": "dropDown",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": false
+      }
+    }
+  ]
+}

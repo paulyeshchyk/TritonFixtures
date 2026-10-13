@@ -1,0 +1,261 @@
+{
+  "layout": {
+    "id": 11320,
+    "actionId": 17294,
+    "action": null,
+    "name": "Параметры",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 14391,
+      "name": "",
+      "alias": "Params1",
+      "spaceType": "card",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_11320_14391_1",
+          "caption": "Партия заказа",
+          "fieldType": "string",
+          "columnNumber": 1
+        },
+        {
+          "name": "field_11320_14391_2",
+          "caption": "Приоритет",
+          "fieldType": "scale",
+          "columnNumber": 2,
+          "referenceType": "int",
+          "scaleSettings": [
+            {
+              "caption": "Низкий",
+              "values": [
+                {
+                  "color": "#D9D9D7",
+                  "value": 9
+                },
+                {
+                  "color": "#E3DDCB",
+                  "value": 8
+                },
+                {
+                  "color": "#EBDFC1",
+                  "value": 7
+                }
+              ]
+            },
+            {
+              "caption": "Средний",
+              "values": [
+                {
+                  "color": "#F4E3B5",
+                  "value": 6
+                },
+                {
+                  "color": "#FFE7A9",
+                  "value": 5
+                },
+                {
+                  "color": "#FFCA9B",
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "caption": "Высокий",
+              "values": [
+                {
+                  "color": "#FFB18E",
+                  "value": 3
+                },
+                {
+                  "color": "#FF9681",
+                  "value": 2
+                },
+                {
+                  "color": "#FF6E6D",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "field_11320_14391_3",
+          "caption": "Номенклатура",
+          "fieldType": "reference",
+          "columnNumber": 3,
+          "referenceType": "!Номенклатура ДСЕ"
+        },
+        {
+          "name": "field_11320_14391_4",
+          "caption": "Количество план",
+          "fieldType": "referenceAttribute",
+          "columnNumber": 4,
+          "referenceType": "!Количество (план)"
+        },
+        {
+          "name": "field_11320_14391_5",
+          "caption": "Дата план",
+          "fieldType": "date",
+          "columnNumber": 5
+        },
+        {
+          "name": "field_11320_14391_6",
+          "caption": "Примечание",
+          "fieldType": "string",
+          "columnNumber": 6
+        },
+        {
+          "name": "field_11320_14391_7",
+          "caption": "Использовать дату для заказа",
+          "fieldType": "boolean",
+          "columnNumber": 7
+        }
+      ],
+      "children": [],
+      "sortOrder": 1
+    },
+    {
+      "id": 14244,
+      "name": "Список выбранных ПЗ",
+      "alias": "Псевдоним_14244",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_2081_14244_0",
+          "caption": "Selected",
+          "fieldType": "boolean",
+          "columnNumber": 0
+        },
+        {
+          "name": "field_2081_14244_4",
+          "caption": "№ ПЗ",
+          "fieldType": "string",
+          "columnNumber": 4
+        },
+        {
+          "name": "field_2081_14244_5",
+          "caption": "Обозначение",
+          "fieldType": "string",
+          "columnNumber": 5
+        },
+        {
+          "name": "field_2081_14244_6",
+          "caption": "Наименование",
+          "fieldType": "string",
+          "columnNumber": 6
+        }
+      ],
+      "children": [],
+      "sortOrder": 2
+    }
+  ],
+  "values": [
+    {
+      "fieldName": "field_11320_14391_1",
+      "value": "100-334-З",
+      "meta": {
+        "caption": "Партия заказа",
+        "fieldType": "string",
+        "referenceType": "",
+        "displayType": "unknown",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": true
+      },
+      "hasLinkToCard": false
+    },
+    {
+      "fieldName": "field_11320_14391_2",
+      "value": "3",
+      "meta": {
+        "caption": "Приоритет",
+        "fieldType": "scale",
+        "referenceType": "int",
+        "displayType": "unknown",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      },
+      "hasLinkToCard": false
+    },
+    {
+      "fieldName": "field_11320_14391_3",
+      "value": "",
+      "meta": {
+        "caption": "Номенклатура",
+        "fieldType": "reference",
+        "referenceType": "!Номенклатура ДСЕ",
+        "displayType": "unknown",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      },
+      "hasLinkToCard": false
+    },
+    {
+      "fieldName": "field_11320_14391_4",
+      "value": null,
+      "meta": {
+        "caption": "Количество план",
+        "fieldType": "referenceAttribute",
+        "referenceType": "!Количество (план)",
+        "displayType": "integer",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      },
+      "hasLinkToCard": false
+    },
+    {
+      "fieldName": "field_11320_14391_5",
+      "value": "01.06.2026",
+      "meta": {
+        "caption": "Дата план",
+        "fieldType": "date",
+        "referenceType": "",
+        "displayType": "unknown",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": false
+      },
+      "hasLinkToCard": false,
+      "warning": {
+        "warningType": 1,
+        "message": "Дата план 01.06.2026 не должна быть меньше текущей даты"
+      }
+    },
+    {
+      "fieldName": "field_11320_14391_6",
+      "value": null,
+      "meta": {
+        "caption": "Примечание",
+        "fieldType": "string",
+        "referenceType": "",
+        "displayType": "unknown",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": false
+      },
+      "hasLinkToCard": false
+    },
+    {
+      "fieldName": "field_11320_14391_7",
+      "value": null,
+      "meta": {
+        "caption": "Использовать дату для заказа",
+        "fieldType": "boolean",
+        "referenceType": "",
+        "displayType": "unknown",
+        "visible": false,
+        "isRequired": false,
+        "readOnly": false
+      },
+      "hasLinkToCard": false
+    }
+  ]
+}

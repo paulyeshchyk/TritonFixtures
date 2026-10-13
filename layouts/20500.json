@@ -1,0 +1,47 @@
+{
+  "layout": {
+    "id": 21500,
+    "actionId": 20500,
+    "action": null,
+    "name": "Контрагенты",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 21950,
+      "name": "Контрагенты",
+      "alias": "list-20500",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_cp_list_1",
+          "caption": "ИНН",
+          "fieldType": "string",
+          "columnNumber": 1,
+          "attributeMapping": "inn"
+        },
+        {
+          "name": "field_cp_list_2",
+          "caption": "Наименование",
+          "fieldType": "string",
+          "columnNumber": 2,
+          "attributeMapping": "name"
+        },
+        {
+          "name": "field_cp_list_3",
+          "caption": "Город",
+          "fieldType": "string",
+          "columnNumber": 3,
+          "attributeMapping": "city"
+        }
+      ],
+      "children": [],
+      "sortOrder": 1,
+      "targetEntity": "dictionary:contractors:counterparties"
+    }
+  ],
+  "values": []
+}

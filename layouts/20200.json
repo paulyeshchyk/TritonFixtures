@@ -1,0 +1,61 @@
+{
+  "layout": {
+    "id": 21200,
+    "actionId": 20200,
+    "action": null,
+    "name": "Штатные единицы",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 21920,
+      "name": "Штатные единицы",
+      "alias": "list-20200",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_su_list_1",
+          "caption": "Должность",
+          "fieldType": "string",
+          "columnNumber": 1,
+          "attributeMapping": "position"
+        },
+        {
+          "name": "field_su_list_2",
+          "caption": "Ставка",
+          "fieldType": "numeric",
+          "columnNumber": 2,
+          "attributeMapping": "rate"
+        },
+        {
+          "name": "field_su_list_3",
+          "caption": "Оклад",
+          "fieldType": "numeric",
+          "columnNumber": 3,
+          "attributeMapping": "salary"
+        },
+        {
+          "name": "field_su_list_4",
+          "caption": "С",
+          "fieldType": "date",
+          "columnNumber": 4,
+          "attributeMapping": "from"
+        },
+        {
+          "name": "field_su_list_5",
+          "caption": "По",
+          "fieldType": "date",
+          "columnNumber": 5,
+          "attributeMapping": "to"
+        }
+      ],
+      "children": [],
+      "sortOrder": 1,
+      "targetEntity": "personnel:workers:staff-units"
+    }
+  ],
+  "values": []
+}

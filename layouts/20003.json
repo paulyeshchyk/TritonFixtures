@@ -1,0 +1,149 @@
+{
+  "layout": {
+    "id": 21003,
+    "actionId": 20003,
+    "action": null,
+    "name": "Штатная единица",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 24000,
+      "name": "Штатная единица",
+      "alias": "staff-unit-root",
+      "spaceType": "tab",
+      "spaceRole": "input",
+      "fields": [],
+      "children": [
+        {
+          "id": 24001,
+          "name": "Параметры",
+          "alias": "staff-unit-params",
+          "spaceType": "card",
+          "spaceRole": "input",
+          "fields": [
+            {
+              "name": "field_21003_24001_1",
+              "caption": "Должность",
+              "fieldType": "string",
+              "columnNumber": 1,
+              "attributeMapping": "position"
+            },
+            {
+              "name": "field_21003_24001_2",
+              "caption": "Ставка",
+              "fieldType": "numeric",
+              "columnNumber": 2,
+              "attributeMapping": "rate"
+            },
+            {
+              "name": "field_21003_24001_3",
+              "caption": "Оклад",
+              "fieldType": "numeric",
+              "columnNumber": 3,
+              "attributeMapping": "salary"
+            },
+            {
+              "name": "field_21003_24001_4",
+              "caption": "С",
+              "fieldType": "date",
+              "columnNumber": 4,
+              "attributeMapping": "from"
+            },
+            {
+              "name": "field_21003_24001_5",
+              "caption": "По",
+              "fieldType": "date",
+              "columnNumber": 5,
+              "attributeMapping": "to"
+            },
+            {
+              "name": "field_21003_24001_6",
+              "caption": "Подразделение",
+              "fieldType": "reference",
+              "columnNumber": 6,
+              "referenceType": "!Подразделение",
+              "attributeMapping": "department"
+            }
+          ],
+          "children": [],
+          "sortOrder": 1
+        }
+      ],
+      "sortOrder": 1
+    }
+  ],
+  "values": [
+    {
+      "fieldName": "field_21003_24001_1",
+      "value": "Главный инженер",
+      "meta": {
+        "caption": "Должность",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_21003_24001_2",
+      "value": "1",
+      "meta": {
+        "caption": "Ставка",
+        "fieldType": "numeric",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_21003_24001_3",
+      "value": "150000",
+      "meta": {
+        "caption": "Оклад",
+        "fieldType": "numeric",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_21003_24001_4",
+      "value": "01.01.2024",
+      "meta": {
+        "caption": "С",
+        "fieldType": "date",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_21003_24001_5",
+      "value": null,
+      "meta": {
+        "caption": "По",
+        "fieldType": "date",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_21003_24001_6",
+      "value": "2/1",
+      "meta": {
+        "caption": "Подразделение",
+        "fieldType": "reference",
+        "referenceType": "!Подразделение",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      },
+      "idVersion": 11115,
+      "hasLinkToCard": true
+    }
+  ]
+}

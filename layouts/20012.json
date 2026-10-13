@@ -1,0 +1,148 @@
+{
+  "layout": {
+    "id": 22030,
+    "actionId": 20012,
+    "action": null,
+    "name": "Заказ от заказчика",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 22031,
+      "name": "Заказ",
+      "alias": "order-customers-root",
+      "spaceType": "tab",
+      "spaceRole": "input",
+      "fields": [],
+      "children": [
+        {
+          "id": 22032,
+          "name": "Параметры",
+          "alias": "order-customers-params",
+          "spaceType": "card",
+          "spaceRole": "input",
+          "fields": [
+            {
+              "name": "field_oc_card_1",
+              "caption": "Номер заказа",
+              "fieldType": "string",
+              "columnNumber": 1,
+              "attributeMapping": "number"
+            },
+            {
+              "name": "field_oc_card_2",
+              "caption": "Заказчик",
+              "fieldType": "reference",
+              "columnNumber": 2,
+              "referenceType": "!Контрагент",
+              "attributeMapping": "customer"
+            },
+            {
+              "name": "field_oc_card_3",
+              "caption": "Дата заказа",
+              "fieldType": "date",
+              "columnNumber": 3,
+              "attributeMapping": "orderDate"
+            },
+            {
+              "name": "field_oc_card_4",
+              "caption": "Сумма",
+              "fieldType": "numeric",
+              "columnNumber": 4,
+              "attributeMapping": "amount"
+            },
+            {
+              "name": "field_oc_card_5",
+              "caption": "Приоритет",
+              "fieldType": "scale",
+              "columnNumber": 5,
+              "attributeMapping": "priority"
+            },
+            {
+              "name": "field_oc_card_6",
+              "caption": "Статус",
+              "fieldType": "string",
+              "columnNumber": 6,
+              "attributeMapping": "status"
+            }
+          ],
+          "children": [],
+          "sortOrder": 1
+        }
+      ],
+      "sortOrder": 1
+    }
+  ],
+  "values": [
+    {
+      "fieldName": "field_oc_card_1",
+      "value": "ORD-C-2024-001",
+      "meta": {
+        "caption": "Номер заказа",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": true
+      }
+    },
+    {
+      "fieldName": "field_oc_card_2",
+      "value": "ООО Ромашка",
+      "meta": {
+        "caption": "Заказчик",
+        "fieldType": "reference",
+        "referenceType": "!Контрагент",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      },
+      "idVersion": 9001
+    },
+    {
+      "fieldName": "field_oc_card_3",
+      "value": "15.03.2024",
+      "meta": {
+        "caption": "Дата заказа",
+        "fieldType": "date",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_oc_card_4",
+      "value": "1250000",
+      "meta": {
+        "caption": "Сумма",
+        "fieldType": "numeric",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_oc_card_5",
+      "value": "2",
+      "meta": {
+        "caption": "Приоритет",
+        "fieldType": "scale",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_oc_card_6",
+      "value": "В работе",
+      "meta": {
+        "caption": "Статус",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": true
+      }
+    }
+  ]
+}

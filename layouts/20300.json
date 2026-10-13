@@ -1,0 +1,47 @@
+{
+  "layout": {
+    "id": 21300,
+    "actionId": 20300,
+    "action": null,
+    "name": "Подразделения",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 21930,
+      "name": "Подразделения",
+      "alias": "list-20300",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_d_list_1",
+          "caption": "Код",
+          "fieldType": "string",
+          "columnNumber": 1,
+          "attributeMapping": "code"
+        },
+        {
+          "name": "field_d_list_2",
+          "caption": "Название",
+          "fieldType": "string",
+          "columnNumber": 2,
+          "attributeMapping": "name"
+        },
+        {
+          "name": "field_d_list_3",
+          "caption": "Активно",
+          "fieldType": "boolean",
+          "columnNumber": 3,
+          "attributeMapping": "isActive"
+        }
+      ],
+      "children": [],
+      "sortOrder": 1,
+      "targetEntity": "dictionary:enterprise:departments"
+    }
+  ],
+  "values": []
+}

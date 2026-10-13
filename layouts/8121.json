@@ -1,0 +1,297 @@
+{
+  "layout": {
+    "id": 3096,
+    "actionId": 8121,
+    "action": null,
+    "name": "Параметры",
+    "description": "",
+    "access_Level": 1,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 6164,
+      "name": "Параметры",
+      "alias": "Псевдоним_06164",
+      "spaceType": "card",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_3096_6164_0",
+          "caption": "Номер заказа-аналога",
+          "fieldType": "string",
+          "columnNumber": 0
+        },
+        {
+          "name": "field_3096_6164_1",
+          "caption": "Тип заказа",
+          "fieldType": "dropDown",
+          "columnNumber": 1,
+          "valuesList": [
+            "От заказчиков",
+            "На склад"
+          ]
+        },
+        {
+          "name": "field_3096_6164_2",
+          "caption": "Тема",
+          "fieldType": "reference",
+          "columnNumber": 2,
+          "referenceType": "!Тема"
+        },
+        {
+          "name": "field_3096_6164_3",
+          "caption": "Номер",
+          "fieldType": "string",
+          "columnNumber": 3
+        },
+        {
+          "name": "field_3096_6164_4",
+          "caption": "Подразделение",
+          "fieldType": "reference",
+          "columnNumber": 4,
+          "referenceType": "!Подразделение"
+        },
+        {
+          "name": "field_3096_6164_6",
+          "caption": "Ответственный",
+          "fieldType": "reference",
+          "columnNumber": 6,
+          "referenceType": "!Работник"
+        },
+        {
+          "name": "field_3096_6164_7",
+          "caption": "Приоритет",
+          "fieldType": "scale",
+          "columnNumber": 7,
+          "scaleSettings": [
+            {
+              "caption": "Низкий",
+              "values": [
+                {
+                  "color": "#D9D9D7",
+                  "value": 9
+                },
+                {
+                  "color": "#E3DDCB",
+                  "value": 8
+                },
+                {
+                  "color": "#EBDFC1",
+                  "value": 7
+                }
+              ]
+            },
+            {
+              "caption": "Средний",
+              "values": [
+                {
+                  "color": "#F4E3B5",
+                  "value": 6
+                },
+                {
+                  "color": "#FFE7A9",
+                  "value": 5
+                },
+                {
+                  "color": "#FFCA9B",
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "caption": "Высокий",
+              "values": [
+                {
+                  "color": "#FFB18E",
+                  "value": 3
+                },
+                {
+                  "color": "#FF9681",
+                  "value": 2
+                },
+                {
+                  "color": "#FF6E6D",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "field_3096_6164_8",
+          "caption": "Рассчитывать плановую дату",
+          "fieldType": "boolean",
+          "columnNumber": 8
+        },
+        {
+          "name": "field_3096_6164_9",
+          "caption": "Увеличить плановую дату на (дней)",
+          "fieldType": "numeric",
+          "columnNumber": 9
+        },
+        {
+          "name": "field_3096_6164_10",
+          "caption": "Дата план",
+          "fieldType": "date",
+          "columnNumber": 10
+        }
+      ],
+      "children": [],
+      "sortOrder": 1
+    },
+    {
+      "id": 6165,
+      "name": "Позиции",
+      "alias": "positions",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_pos_0",
+          "caption": "№",
+          "fieldType": "string",
+          "columnNumber": 0
+        },
+        {
+          "name": "field_pos_1",
+          "caption": "Наименование",
+          "fieldType": "string",
+          "columnNumber": 1
+        },
+        {
+          "name": "field_pos_2",
+          "caption": "Кол-во",
+          "fieldType": "numeric",
+          "columnNumber": 2
+        },
+        {
+          "name": "field_pos_3",
+          "caption": "ЕИ",
+          "fieldType": "string",
+          "columnNumber": 3
+        }
+      ],
+      "children": [],
+      "sortOrder": 2
+    }
+  ],
+  "values": [
+    {
+      "fieldName": "field_3096_6164_0",
+      "value": "_900",
+      "meta": {
+        "caption": "Номер заказа-аналога",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": true
+      }
+    },
+    {
+      "fieldName": "field_3096_6164_1",
+      "value": "На склад",
+      "meta": {
+        "caption": "Тип заказа",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_3096_6164_2",
+      "value": "ГОЗ",
+      "meta": {
+        "caption": "Тема",
+        "fieldType": "reference",
+        "referenceType": "!Тема",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      },
+      "idVersion": 7790
+    },
+    {
+      "fieldName": "field_3096_6164_3",
+      "value": "100-740142909",
+      "meta": {
+        "caption": "Номер",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_3096_6164_4",
+      "value": "1/0",
+      "meta": {
+        "caption": "Подразделение",
+        "fieldType": "reference",
+        "referenceType": "!Подразделение",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      },
+      "idVersion": 11114
+    },
+    {
+      "fieldName": "field_3096_6164_6",
+      "value": "Эйдельман Ш.З.",
+      "meta": {
+        "caption": "Ответственный",
+        "fieldType": "reference",
+        "referenceType": "!Работник",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      },
+      "idVersion": 1001
+    },
+    {
+      "fieldName": "field_3096_6164_7",
+      "value": "2",
+      "meta": {
+        "caption": "Приоритет",
+        "fieldType": "scale",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_3096_6164_8",
+      "value": false,
+      "meta": {
+        "caption": "Рассчитывать плановую дату",
+        "fieldType": "boolean",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_3096_6164_9",
+      "value": 30,
+      "meta": {
+        "caption": "Увеличить плановую дату на (дней)",
+        "fieldType": "numeric",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_3096_6164_10",
+      "value": "29.08.2026",
+      "meta": {
+        "caption": "Дата план",
+        "fieldType": "date",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": true
+      }
+    }
+  ]
+}

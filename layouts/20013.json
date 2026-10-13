@@ -1,0 +1,127 @@
+{
+  "layout": {
+    "id": 22040,
+    "actionId": 20013,
+    "action": null,
+    "name": "Заказ на склад",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 22041,
+      "name": "Заказ",
+      "alias": "order-stock-root",
+      "spaceType": "tab",
+      "spaceRole": "input",
+      "fields": [],
+      "children": [
+        {
+          "id": 22042,
+          "name": "Параметры",
+          "alias": "order-stock-params",
+          "spaceType": "card",
+          "spaceRole": "input",
+          "fields": [
+            {
+              "name": "field_os_card_1",
+              "caption": "Номер заказа",
+              "fieldType": "string",
+              "columnNumber": 1,
+              "attributeMapping": "number"
+            },
+            {
+              "name": "field_os_card_2",
+              "caption": "Партия",
+              "fieldType": "string",
+              "columnNumber": 2,
+              "attributeMapping": "batch"
+            },
+            {
+              "name": "field_os_card_3",
+              "caption": "План. дата",
+              "fieldType": "date",
+              "columnNumber": 3,
+              "attributeMapping": "plannedDate"
+            },
+            {
+              "name": "field_os_card_4",
+              "caption": "Сумма",
+              "fieldType": "numeric",
+              "columnNumber": 4,
+              "attributeMapping": "amount"
+            },
+            {
+              "name": "field_os_card_5",
+              "caption": "Статус",
+              "fieldType": "string",
+              "columnNumber": 5,
+              "attributeMapping": "status"
+            }
+          ],
+          "children": [],
+          "sortOrder": 1
+        }
+      ],
+      "sortOrder": 1
+    }
+  ],
+  "values": [
+    {
+      "fieldName": "field_os_card_1",
+      "value": "ORD-S-2024-001",
+      "meta": {
+        "caption": "Номер заказа",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": true
+      }
+    },
+    {
+      "fieldName": "field_os_card_2",
+      "value": "B-001",
+      "meta": {
+        "caption": "Партия",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_os_card_3",
+      "value": "01.06.2024",
+      "meta": {
+        "caption": "План. дата",
+        "fieldType": "date",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_os_card_4",
+      "value": "500000",
+      "meta": {
+        "caption": "Сумма",
+        "fieldType": "numeric",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_os_card_5",
+      "value": "В работе",
+      "meta": {
+        "caption": "Статус",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": true
+      }
+    }
+  ]
+}

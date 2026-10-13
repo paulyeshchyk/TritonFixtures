@@ -1,0 +1,6 @@
+﻿{
+  "major": 2,
+  "minor": 0,
+  "releasedAt": "2026-10-13",
+  "notes": "Initial shared fixtures. Catalog + layouts 17294, 20001. Single-tier versioning: major must match TritonFront and TritonBack."
+}

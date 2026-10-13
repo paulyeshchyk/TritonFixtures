@@ -1,0 +1,61 @@
+{
+  "layout": {
+    "id": 21000,
+    "actionId": 20000,
+    "action": null,
+    "name": "Работники",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 21900,
+      "name": "Работники",
+      "alias": "list-20000",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_w_list_1",
+          "caption": "Код",
+          "fieldType": "string",
+          "columnNumber": 1,
+          "attributeMapping": "code"
+        },
+        {
+          "name": "field_w_list_2",
+          "caption": "ФИО",
+          "fieldType": "string",
+          "columnNumber": 2,
+          "attributeMapping": "fullName"
+        },
+        {
+          "name": "field_w_list_3",
+          "caption": "Должность",
+          "fieldType": "string",
+          "columnNumber": 3,
+          "attributeMapping": "position"
+        },
+        {
+          "name": "field_w_list_4",
+          "caption": "Email",
+          "fieldType": "string",
+          "columnNumber": 4,
+          "attributeMapping": "email"
+        },
+        {
+          "name": "field_w_list_5",
+          "caption": "Активен",
+          "fieldType": "boolean",
+          "columnNumber": 5,
+          "attributeMapping": "isActive"
+        }
+      ],
+      "children": [],
+      "sortOrder": 1,
+      "targetEntity": "personnel:workers:workers"
+    }
+  ],
+  "values": []
+}

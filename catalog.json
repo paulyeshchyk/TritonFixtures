@@ -1,0 +1,3202 @@
+{
+  "types": [
+    {
+      "code": "common",
+      "title": "Общие",
+      "icon": "pi pi-home",
+      "contexts": [
+        {
+          "code": "navigation",
+          "title": "Навигация",
+          "entities": [
+            {
+              "code": "home",
+              "title": "Главная",
+              "permissionKey": "common:home-page",
+              "icon": "pi pi-home",
+              "description": "Главная страница",
+              "link": "/"
+            },
+            {
+              "code": "engine",
+              "title": "Движок (Engine)",
+              "permissionKey": "common:dev-form",
+              "icon": "pi pi-cog",
+              "description": "Панель управления движком",
+              "link": "/dev/form"
+            },
+            {
+              "code": "engine",
+              "title": "Движок-демо (Engine)",
+              "permissionKey": "common:dev-form-demo",
+              "icon": "pi pi-cog",
+              "description": "Панель управления движком(демо)",
+              "link": "/dev/form-demo"
+            },
+            {
+              "code": "broken-link",
+              "title": "Битая ссылка (Тест 404)",
+              "permissionKey": "common:broken-link",
+              "icon": "pi pi-exclamation-triangle",
+              "description": "Проверка перехода по несуществующему маршруту",
+              "link": "/non-existent-route"
+            },
+            {
+              "code": "no-link-entity",
+              "title": "Без ссылки (Тест Null)",
+              "permissionKey": "common:broken-link-no-entity",
+              "icon": "pi pi-question-circle",
+              "description": "Проверка отсутствия настройки ссылки"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "production",
+      "title": "Производство",
+      "icon": "pi pi-cog",
+      "contexts": [
+        {
+          "code": "production-requests-customers",
+          "title": "Заявки на производство (от заказчиков)",
+          "entities": [
+            {
+              "code": "production-requests-customers",
+              "title": "Заявки на производство (от заказчиков)",
+              "permissionKey": "production:production-requests-customers:production-requests-customers",
+              "icon": "pi pi-file-edit",
+              "description": "Заявки от внешних заказчиков",
+              "link": "/engine/entity/production-requests-customers"
+            }
+          ]
+        },
+        {
+          "code": "production-requests-stock",
+          "title": "Заявки на производство (на склад)",
+          "entities": [
+            {
+              "code": "production-requests-stock",
+              "title": "Заявки на производство (на склад)",
+              "permissionKey": "production:production-requests-stock:production-requests-stock",
+              "icon": "pi pi-file-edit",
+              "description": "Заявки для пополнения склада",
+              "link": "/engine/entity/production-requests-stock"
+            }
+          ]
+        },
+        {
+          "code": "production-orders-customers",
+          "title": "Заказы на производство (от заказчиков)",
+          "entities": [
+            {
+              "code": "production-orders-customers",
+              "title": "Заказы на производство (от заказчиков)",
+              "permissionKey": "production:production-orders-customers:production-orders-customers",
+              "icon": "pi pi-shopping-cart",
+              "description": "Заказы клиентов в производство",
+              "link": "/engine/entity/production-orders-customers"
+            }
+          ]
+        },
+        {
+          "code": "production-orders-stock",
+          "title": "Заказы на производство (на склад)",
+          "entities": [
+            {
+              "code": "production-orders-stock",
+              "title": "Заказы на производство (на склад)",
+              "permissionKey": "production:production-orders-stock:production-orders-stock",
+              "icon": "pi pi-shopping-cart",
+              "description": "Заказы для пополнения склада",
+              "link": "/engine/entity/production-orders-stock"
+            }
+          ]
+        },
+        {
+          "code": "production-specification",
+          "title": "Производственная спецификация (ПСп)",
+          "icon": "pi pi-sitemap",
+          "entities": [
+            {
+              "code": "spec-copy",
+              "title": "Копирование ПСп",
+              "permissionKey": "production:production-specification:spec-copy",
+              "icon": "pi pi-copy",
+              "description": "Копирование спецификаций",
+              "link": "/engine/entity/spec-copy"
+            },
+            {
+              "code": "import-ktd",
+              "title": "Импорт КТД",
+              "permissionKey": "production:production-specification:import-ktd",
+              "icon": "pi pi-upload",
+              "description": "Импорт конструкторско-технологической документации",
+              "link": "/engine/entity/import-ktd"
+            }
+          ],
+          "children": [
+            {
+              "code": "production-specification-content",
+              "title": "Ведение состава",
+              "icon": "pi pi-list",
+              "entities": [
+                {
+                  "code": "manage-spec",
+                  "title": "Ведение ПСп",
+                  "permissionKey": "production:production-specification:manage-spec",
+                  "icon": "pi pi-pencil",
+                  "description": "Ведение производственных спецификаций",
+                  "link": "/engine/entity/manage-spec"
+                },
+                {
+                  "code": "manage-stages",
+                  "title": "Ведение этапов подготовки производства",
+                  "permissionKey": "production:production-specification:manage-stages",
+                  "icon": "pi pi-list",
+                  "description": "Этапы подготовки производства",
+                  "link": "/engine/entity/manage-stages"
+                },
+                {
+                  "code": "composition-in-spec",
+                  "title": "Ведение состава изделия в ПСп",
+                  "permissionKey": "production:production-specification:composition-in-spec",
+                  "icon": "pi pi-map",
+                  "description": "Состав изделия в ПСп",
+                  "link": "/engine/entity/composition-in-spec"
+                },
+                {
+                  "code": "assembly-in-spec",
+                  "title": "Ведение комплектации в ПСп",
+                  "permissionKey": "production:production-specification:assembly-in-spec",
+                  "icon": "pi pi-list-check",
+                  "description": "Комплектация в ПСп",
+                  "link": "/engine/entity/assembly-in-spec"
+                },
+                {
+                  "code": "blanks-in-spec",
+                  "title": "Ведение заготовок в ПСп",
+                  "permissionKey": "production:production-specification:blanks-in-spec",
+                  "icon": "pi pi-box",
+                  "description": "Заготовки в ПСп",
+                  "link": "/engine/entity/blanks-in-spec"
+                },
+                {
+                  "code": "batch-change-registry",
+                  "title": "Реестр изменений партий ДСЕ",
+                  "permissionKey": "production:production-specification:batch-change-registry",
+                  "icon": "pi pi-history",
+                  "description": "Изменения партий ДСЕ",
+                  "link": "/engine/entity/batch-change-registry"
+                }
+              ]
+            },
+            {
+              "code": "production-specification-norms",
+              "title": "Нормативы",
+              "icon": "pi pi-clock",
+              "entities": [
+                {
+                  "code": "materials-in-spec",
+                  "title": "Ведение материалов в ПСп",
+                  "permissionKey": "production:production-specification:materials-in-spec",
+                  "icon": "pi pi-database",
+                  "description": "Материалы в ПСп",
+                  "link": "/engine/entity/materials-in-spec"
+                },
+                {
+                  "code": "aux-materials-in-spec",
+                  "title": "Ведение вспомогательных материалов в ПСп",
+                  "permissionKey": "production:production-specification:aux-materials-in-spec",
+                  "icon": "pi pi-database",
+                  "description": "Вспомогательные материалы",
+                  "link": "/engine/entity/aux-materials-in-spec"
+                },
+                {
+                  "code": "labor-norms-in-spec",
+                  "title": "Ведение трудовых нормативов в ПСп",
+                  "permissionKey": "production:production-specification:labor-norms-in-spec",
+                  "icon": "pi pi-clock",
+                  "description": "Трудовые нормативы",
+                  "link": "/engine/entity/labor-norms-in-spec"
+                },
+                {
+                  "code": "labor-resources-in-spec",
+                  "title": "Ведение трудовых ресурсов в ПСп",
+                  "permissionKey": "production:production-specification:labor-resources-in-spec",
+                  "icon": "pi pi-users",
+                  "description": "Трудовые ресурсы",
+                  "link": "/engine/entity/labor-resources-in-spec"
+                }
+              ]
+            },
+            {
+              "code": "production-specification-routing",
+              "title": "Маршрут и ресурсы",
+              "icon": "pi pi-map",
+              "entities": [
+                {
+                  "code": "routing-in-spec",
+                  "title": "Ведение расцеховок в ПСп",
+                  "permissionKey": "production:production-specification:routing-in-spec",
+                  "icon": "pi pi-map",
+                  "description": "Расцеховки в ПСп",
+                  "link": "/engine/entity/routing-in-spec"
+                },
+                {
+                  "code": "tech-in-spec",
+                  "title": "Ведение техпроцессов в ПСп",
+                  "permissionKey": "production:production-specification:tech-in-spec",
+                  "icon": "pi pi-cog",
+                  "description": "Техпроцессы в ПСп",
+                  "link": "/engine/entity/tech-in-spec"
+                },
+                {
+                  "code": "equipment-in-spec",
+                  "title": "Ведение оборудования/РЦ в ПСп",
+                  "permissionKey": "production:production-specification:equipment-in-spec",
+                  "icon": "pi pi-desktop",
+                  "description": "Оборудование и РЦ",
+                  "link": "/engine/entity/equipment-in-spec"
+                },
+                {
+                  "code": "tooling-in-spec",
+                  "title": "Ведение технологической оснастки в ПСп",
+                  "permissionKey": "production:production-specification:tooling-in-spec",
+                  "icon": "pi pi-wrench",
+                  "description": "Технологическая оснастка",
+                  "link": "/engine/entity/tooling-in-spec"
+                },
+                {
+                  "code": "instruments-in-spec",
+                  "title": "Ведение инструмента в ПСп",
+                  "permissionKey": "production:production-specification:instruments-in-spec",
+                  "icon": "pi pi-hammer",
+                  "description": "Инструмент в ПСп",
+                  "link": "/engine/entity/instruments-in-spec"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "production-needs-analysis",
+          "title": "Анализ потребностей производства",
+          "entities": [
+            {
+              "code": "material-card",
+              "title": "Материальная карта",
+              "permissionKey": "production:production-needs-analysis:material-card",
+              "icon": "pi pi-id-card",
+              "description": "Материальная карта изделия",
+              "link": "/engine/entity/material-card"
+            },
+            {
+              "code": "material-norms",
+              "title": "Материальные нормативы",
+              "permissionKey": "production:production-needs-analysis:material-norms",
+              "icon": "pi pi-list",
+              "description": "Материальные нормативы",
+              "link": "/engine/entity/material-norms"
+            },
+            {
+              "code": "material-norms-detailed",
+              "title": "Материальные нормативы (подетальные)",
+              "permissionKey": "production:production-needs-analysis:material-norms-detailed",
+              "icon": "pi pi-list",
+              "description": "Подетальные материальные нормативы",
+              "link": "/engine/entity/material-norms-detailed"
+            },
+            {
+              "code": "labor-norms",
+              "title": "Трудовые нормативы",
+              "permissionKey": "production:production-needs-analysis:labor-norms",
+              "icon": "pi pi-clock",
+              "description": "Трудовые нормативы",
+              "link": "/engine/entity/labor-norms"
+            },
+            {
+              "code": "labor-norms-detailed",
+              "title": "Трудовые нормативы (подетальные)",
+              "permissionKey": "production:production-needs-analysis:labor-norms-detailed",
+              "icon": "pi pi-clock",
+              "description": "Подетальные трудовые нормативы",
+              "link": "/engine/entity/labor-norms-detailed"
+            },
+            {
+              "code": "material-requirements",
+              "title": "Потребность в материалах",
+              "permissionKey": "production:production-needs-analysis:material-requirements",
+              "icon": "pi pi-database",
+              "description": "Потребность в материалах",
+              "link": "/engine/entity/material-requirements"
+            },
+            {
+              "code": "aux-material-requirements",
+              "title": "Потребность во вспомогательных материалах",
+              "permissionKey": "production:production-needs-analysis:aux-material-requirements",
+              "icon": "pi pi-database",
+              "description": "Вспомогательные материалы",
+              "link": "/engine/entity/aux-material-requirements"
+            },
+            {
+              "code": "pki-requirements",
+              "title": "Потребность в ПКИ",
+              "permissionKey": "production:production-needs-analysis:pki-requirements",
+              "icon": "pi pi-box",
+              "description": "Покупные комплектующие",
+              "link": "/engine/entity/pki-requirements"
+            },
+            {
+              "code": "equipment-requirements",
+              "title": "Потребность в оборудовании",
+              "permissionKey": "production:production-needs-analysis:equipment-requirements",
+              "icon": "pi pi-desktop",
+              "description": "Оборудование",
+              "link": "/engine/entity/equipment-requirements"
+            },
+            {
+              "code": "tooling-requirements",
+              "title": "Потребность в оснастке",
+              "permissionKey": "production:production-needs-analysis:tooling-requirements",
+              "icon": "pi pi-wrench",
+              "description": "Оснастка",
+              "link": "/engine/entity/tooling-requirements"
+            },
+            {
+              "code": "instrument-requirements",
+              "title": "Потребность в инструменте",
+              "permissionKey": "production:production-needs-analysis:instrument-requirements",
+              "icon": "pi pi-hammer",
+              "description": "Инструмент",
+              "link": "/engine/entity/instrument-requirements"
+            },
+            {
+              "code": "personnel-requirements",
+              "title": "Потребность в персонале",
+              "permissionKey": "production:production-needs-analysis:personnel-requirements",
+              "icon": "pi pi-users",
+              "description": "Персонал",
+              "link": "/engine/entity/personnel-requirements"
+            },
+            {
+              "code": "cooperation-requirements",
+              "title": "Потребность в кооперации",
+              "permissionKey": "production:production-needs-analysis:cooperation-requirements",
+              "icon": "pi pi-share-alt",
+              "description": "Кооперация",
+              "link": "/engine/entity/cooperation-requirements"
+            },
+            {
+              "code": "products-by-requests",
+              "title": "Продукции по заявкам на производство",
+              "permissionKey": "production:production-needs-analysis:products-by-requests",
+              "icon": "pi pi-box",
+              "description": "Продукция по заявкам",
+              "link": "/engine/entity/products-by-requests"
+            },
+            {
+              "code": "dsе-safety-stock",
+              "title": "Номенклатуры ДСЕ по страховому запасу",
+              "permissionKey": "production:production-needs-analysis:dsе-safety-stock",
+              "icon": "pi pi-shield",
+              "description": "Страховой запас ДСЕ",
+              "link": "/engine/entity/dsе-safety-stock"
+            },
+            {
+              "code": "ready-dsе",
+              "title": "Готовых ДСЕ",
+              "permissionKey": "production:production-needs-analysis:ready-dsе",
+              "icon": "pi pi-check-square",
+              "description": "Готовые ДСЕ",
+              "link": "/engine/entity/ready-dsе"
+            },
+            {
+              "code": "materials-assembly",
+              "title": "Материалов и комплектации",
+              "permissionKey": "production:production-needs-analysis:materials-assembly",
+              "icon": "pi pi-list-check",
+              "description": "Материалы и комплектация",
+              "link": "/engine/entity/materials-assembly"
+            },
+            {
+              "code": "assembly-kits",
+              "title": "Комплектации на сборку",
+              "permissionKey": "production:production-needs-analysis:assembly-kits",
+              "icon": "pi pi-list-check",
+              "description": "Комплектация на сборку",
+              "link": "/engine/entity/assembly-kits"
+            }
+          ]
+        },
+        {
+          "code": "production-planning",
+          "title": "Планирование производства",
+          "entities": [
+            {
+              "code": "aggregate-production-program",
+              "title": "Сводная производственная программа",
+              "permissionKey": "production:production-planning:aggregate-production-program",
+              "icon": "pi pi-chart-bar",
+              "description": "Сводная производственная программа",
+              "link": "/engine/entity/aggregate-production-program"
+            },
+            {
+              "code": "finished-goods-plans",
+              "title": "Планы выпуска готовых изделий",
+              "permissionKey": "production:production-planning:finished-goods-plans",
+              "icon": "pi pi-file",
+              "description": "Планы выпуска готовых изделий",
+              "link": "/engine/entity/finished-goods-plans"
+            },
+            {
+              "code": "order-portfolio-analysis",
+              "title": "Анализ портфеля заказов (ведомости)",
+              "permissionKey": "production:production-planning:order-portfolio-analysis",
+              "icon": "pi pi-list",
+              "description": "Анализ портфеля заказов",
+              "link": "/engine/entity/order-portfolio-analysis"
+            },
+            {
+              "code": "critical-resources-description",
+              "title": "Описание изделий в критических ресурсах",
+              "permissionKey": "production:production-planning:critical-resources-description",
+              "icon": "pi pi-exclamation-triangle",
+              "description": "Критические ресурсы",
+              "link": "/engine/entity/critical-resources-description"
+            },
+            {
+              "code": "critical-resources-eval",
+              "title": "Оценка плана по критическим ресурсам",
+              "permissionKey": "production:production-planning:critical-resources-eval",
+              "icon": "pi pi-chart-line",
+              "description": "Оценка плана",
+              "link": "/engine/entity/critical-resources-eval"
+            },
+            {
+              "code": "product-manufacturing-schedules",
+              "title": "Графики изготовления изделий",
+              "permissionKey": "production:production-planning:product-manufacturing-schedules",
+              "icon": "pi pi-calendar",
+              "description": "Графики изготовления",
+              "link": "/engine/entity/product-manufacturing-schedules"
+            },
+            {
+              "code": "readiness-by-order",
+              "title": "По партиям заказа",
+              "permissionKey": "production:production-planning:readiness-by-order",
+              "icon": "pi pi-check-square",
+              "description": "Контроль готовности по заказам",
+              "link": "/engine/entity/readiness-by-order"
+            },
+            {
+              "code": "readiness-by-dsе",
+              "title": "По ДСЕ",
+              "permissionKey": "production:production-planning:readiness-by-dsе",
+              "icon": "pi pi-check-square",
+              "description": "Контроль готовности по ДСЕ",
+              "link": "/engine/entity/readiness-by-dsе"
+            },
+            {
+              "code": "readiness-by-nomenclature",
+              "title": "По номенклатурным планам",
+              "permissionKey": "production:production-planning:readiness-by-nomenclature",
+              "icon": "pi pi-check-square",
+              "description": "Контроль готовности по номенклатуре",
+              "link": "/engine/entity/readiness-by-nomenclature"
+            },
+            {
+              "code": "launch-plans",
+              "title": "Планы запуска ПДСЕ",
+              "permissionKey": "production:production-planning:launch-plans",
+              "icon": "pi pi-play",
+              "description": "Планы запуска",
+              "link": "/engine/entity/launch-plans"
+            },
+            {
+              "code": "release-plans",
+              "title": "Планы выпуска ПДСЕ",
+              "permissionKey": "production:production-planning:release-plans",
+              "icon": "pi pi-check-square",
+              "description": "Планы выпуска",
+              "link": "/engine/entity/release-plans"
+            },
+            {
+              "code": "launch-release-plans",
+              "title": "Планы запуска-выпуска ПДСЕ",
+              "permissionKey": "production:production-planning:launch-release-plans",
+              "icon": "pi pi-calendar",
+              "description": "Планы запуска-выпуска",
+              "link": "/engine/entity/launch-release-plans"
+            },
+            {
+              "code": "work-plan-reports",
+              "title": "Планы-отчеты выполнения работ по ПДСЕ",
+              "permissionKey": "production:production-planning:work-plan-reports",
+              "icon": "pi pi-list",
+              "description": "Планы-отчеты",
+              "link": "/engine/entity/work-plan-reports"
+            },
+            {
+              "code": "manufacturing-plan-changes",
+              "title": "Изменения планов изготовления ПДСЕ",
+              "permissionKey": "production:production-planning:manufacturing-plan-changes",
+              "icon": "pi pi-history",
+              "description": "Изменения планов",
+              "link": "/engine/entity/manufacturing-plan-changes"
+            },
+            {
+              "code": "planned-items-analysis",
+              "title": "Анализ плановых позиций ПЗ/ПДСЕ",
+              "permissionKey": "production:production-planning:planned-items-analysis",
+              "icon": "pi pi-chart-line",
+              "description": "Анализ плановых позиций",
+              "link": "/engine/entity/planned-items-analysis"
+            },
+            {
+              "code": "launch-support-analysis",
+              "title": "Анализ обеспечения запуска ПДСЕ (ведомости)",
+              "permissionKey": "production:production-planning:launch-support-analysis",
+              "icon": "pi pi-list",
+              "description": "Анализ обеспечения запуска",
+              "link": "/engine/entity/launch-support-analysis"
+            },
+            {
+              "code": "stage-plan-routing",
+              "title": "Планы этапа Расцеховка",
+              "permissionKey": "production:production-planning:stage-plan-routing",
+              "icon": "pi pi-map",
+              "description": "Планы этапа расцеховки",
+              "link": "/engine/entity/stage-plan-routing"
+            },
+            {
+              "code": "stage-plan-material-norms",
+              "title": "Планы этапа Материальные нормативы",
+              "permissionKey": "production:production-planning:stage-plan-material-norms",
+              "icon": "pi pi-list",
+              "description": "Планы этапа материальных нормативов",
+              "link": "/engine/entity/stage-plan-material-norms"
+            },
+            {
+              "code": "stage-plan-tech",
+              "title": "Планы этапа Разработка ТП",
+              "permissionKey": "production:production-planning:stage-plan-tech",
+              "icon": "pi pi-cog",
+              "description": "Планы этапа разработки ТП",
+              "link": "/engine/entity/stage-plan-tech"
+            },
+            {
+              "code": "stage-plan-labor-norms",
+              "title": "Планы этапа Трудовые нормативы",
+              "permissionKey": "production:production-planning:stage-plan-labor-norms",
+              "icon": "pi pi-clock",
+              "description": "Планы этапа трудовых нормативов",
+              "link": "/engine/entity/stage-plan-labor-norms"
+            },
+            {
+              "code": "stage-plan-support",
+              "title": "Планы этапа Обеспечение ПИ",
+              "permissionKey": "production:production-planning:stage-plan-support",
+              "icon": "pi pi-list",
+              "description": "Планы этапа обеспечения ПИ",
+              "link": "/engine/entity/stage-plan-support"
+            },
+            {
+              "code": "directive-stage-planning",
+              "title": "Директивное планирование этапов ПП",
+              "permissionKey": "production:production-planning:directive-stage-planning",
+              "icon": "pi pi-check-square",
+              "description": "Директивное планирование",
+              "link": "/engine/entity/directive-stage-planning"
+            },
+            {
+              "code": "unclosed-stages-list",
+              "title": "Ведомость ПДСЕ с незакрытыми этапами",
+              "permissionKey": "production:production-planning:unclosed-stages-list",
+              "icon": "pi pi-list",
+              "description": "Незакрытые этапы",
+              "link": "/engine/entity/unclosed-stages-list"
+            },
+            {
+              "code": "launch-manufacture-dates",
+              "title": "Расчет дат запуска и изготовления ПДСЕ",
+              "permissionKey": "production:production-planning:launch-manufacture-dates",
+              "icon": "pi pi-calendar",
+              "description": "Расчет дат",
+              "link": "/engine/entity/launch-manufacture-dates"
+            },
+            {
+              "code": "shift-plans-calc",
+              "title": "Расчет посменных планов РЦ",
+              "permissionKey": "production:production-planning:shift-plans-calc",
+              "icon": "pi pi-clock",
+              "description": "Посменные планы",
+              "link": "/engine/entity/shift-plans-calc"
+            }
+          ]
+        },
+        {
+          "code": "production-accounting",
+          "title": "Производственный учет",
+          "entities": [
+            {
+              "code": "work-progress-em",
+              "title": "Ход выполнения работ (ЭМ)",
+              "permissionKey": "production:production-accounting:work-progress-em",
+              "icon": "pi pi-spin pi-cog",
+              "description": "Ход выполнения работ",
+              "link": "/engine/entity/work-progress-em"
+            },
+            {
+              "code": "manufacture-progress-dsе",
+              "title": "Ход изготовления ДСЕ",
+              "permissionKey": "production:production-accounting:manufacture-progress-dsе",
+              "icon": "pi pi-sync",
+              "description": "Ход изготовления ДСЕ",
+              "link": "/engine/entity/manufacture-progress-dsе"
+            },
+            {
+              "code": "dsе-batches",
+              "title": "Партии ДСЕ",
+              "permissionKey": "production:production-accounting:dsе-batches",
+              "icon": "pi pi-box",
+              "description": "Партии ДСЕ",
+              "link": "/engine/entity/dsе-batches"
+            },
+            {
+              "code": "accounting-docs",
+              "title": "Документы производственного учета",
+              "permissionKey": "production:production-accounting:accounting-docs",
+              "icon": "pi pi-file",
+              "description": "Документы производственного учета",
+              "link": "/engine/entity/accounting-docs"
+            },
+            {
+              "code": "accounting-vedomosti",
+              "title": "Ведомости производственного учета",
+              "permissionKey": "production:production-accounting:accounting-vedomosti",
+              "icon": "pi pi-list",
+              "description": "Ведомости производственного учета",
+              "link": "/engine/entity/accounting-vedomosti"
+            },
+            {
+              "code": "copy-tracking",
+              "title": "Учет экземпляров",
+              "permissionKey": "production:production-accounting:copy-tracking",
+              "icon": "pi pi-copy",
+              "description": "Учет экземпляров изделий",
+              "link": "/engine/entity/copy-tracking"
+            },
+            {
+              "code": "overdue-orders-report",
+              "title": "Ведомость заказов по сорванным срокам изготовления",
+              "permissionKey": "production:production-accounting:overdue-orders-report",
+              "icon": "pi pi-exclamation-triangle",
+              "description": "Сорванные сроки",
+              "link": "/engine/entity/overdue-orders-report"
+            },
+            {
+              "code": "current-production-eval",
+              "title": "Ведомости оценки текущего производства",
+              "permissionKey": "production:production-accounting:current-production-eval",
+              "icon": "pi pi-chart-line",
+              "description": "Оценка текущего производства",
+              "link": "/engine/entity/current-production-eval"
+            },
+            {
+              "code": "unfinished-calc-table",
+              "title": "Таблица обсчёта недодела заказов по сорванным срокам изготовления",
+              "permissionKey": "production:production-accounting:unfinished-calc-table",
+              "icon": "pi pi-table",
+              "description": "Обсчёт недодела",
+              "link": "/engine/entity/unfinished-calc-table"
+            },
+            {
+              "code": "dsе-handover-list",
+              "title": "Ведомость сдачи ДСЕ",
+              "permissionKey": "production:production-accounting:dsе-handover-list",
+              "icon": "pi pi-list",
+              "description": "Сдача ДСЕ",
+              "link": "/engine/entity/dsе-handover-list"
+            },
+            {
+              "code": "unfinished-products",
+              "title": "Ведомость невыполненной продукции",
+              "permissionKey": "production:production-accounting:unfinished-products",
+              "icon": "pi pi-list",
+              "description": "Невыполненная продукция",
+              "link": "/engine/entity/unfinished-products"
+            },
+            {
+              "code": "defect-analysis",
+              "title": "Ведомости анализа брака",
+              "permissionKey": "production:production-accounting:defect-analysis",
+              "icon": "pi pi-exclamation-circle",
+              "description": "Анализ брака",
+              "link": "/engine/entity/defect-analysis"
+            },
+            {
+              "code": "route-sheets",
+              "title": "Сопроводительные листы",
+              "permissionKey": "production:production-accounting:route-sheets",
+              "icon": "pi pi-file",
+              "description": "Сопроводительные листы",
+              "link": "/engine/entity/route-sheets"
+            },
+            {
+              "code": "dsе-move-waybills",
+              "title": "Накладные на перемещение ДСЕ",
+              "permissionKey": "production:production-accounting:dsе-move-waybills",
+              "icon": "pi pi-truck",
+              "description": "Перемещение ДСЕ",
+              "link": "/engine/entity/dsе-move-waybills"
+            },
+            {
+              "code": "dsе-issue-waybills",
+              "title": "Накладные на выдачу ДСЕ в работу",
+              "permissionKey": "production:production-accounting:dsе-issue-waybills",
+              "icon": "pi pi-truck",
+              "description": "Выдача ДСЕ в работу",
+              "link": "/engine/entity/dsе-issue-waybills"
+            },
+            {
+              "code": "loss-acts",
+              "title": "Акты о потерях",
+              "permissionKey": "production:production-accounting:loss-acts",
+              "icon": "pi pi-file",
+              "description": "Акты о потерях",
+              "link": "/engine/entity/loss-acts"
+            },
+            {
+              "code": "defect-acts",
+              "title": "Акты о браке",
+              "permissionKey": "production:production-accounting:defect-acts",
+              "icon": "pi pi-file",
+              "description": "Акты о браке",
+              "link": "/engine/entity/defect-acts"
+            },
+            {
+              "code": "product-copies",
+              "title": "Экземпляры изделий",
+              "permissionKey": "production:production-accounting:product-copies",
+              "icon": "pi pi-copy",
+              "description": "Экземпляры изделий",
+              "link": "/engine/entity/product-copies"
+            },
+            {
+              "code": "copy-vedomosti",
+              "title": "Ведомости по экземплярам изделий",
+              "permissionKey": "production:production-accounting:copy-vedomosti",
+              "icon": "pi pi-list",
+              "description": "Ведомости по экземплярам",
+              "link": "/engine/entity/copy-vedomosti"
+            }
+          ]
+        },
+        {
+          "code": "workshop-management",
+          "title": "Управление работами в цехе",
+          "entities": [
+            {
+              "code": "work-orders",
+              "title": "Рабочие наряды",
+              "permissionKey": "production:workshop-management:work-orders",
+              "icon": "pi pi-file-edit",
+              "description": "Рабочие наряды",
+              "link": "/engine/entity/work-orders"
+            },
+            {
+              "code": "labor-deviation-analysis",
+              "title": "Анализ причин отклонения трудоемкости",
+              "permissionKey": "production:workshop-management:labor-deviation-analysis",
+              "icon": "pi pi-chart-line",
+              "description": "Отклонения трудоемкости",
+              "link": "/engine/entity/labor-deviation-analysis"
+            },
+            {
+              "code": "opr-timesheets",
+              "title": "Табели учета рабочего времени ОПР",
+              "permissionKey": "production:workshop-management:opr-timesheets",
+              "icon": "pi pi-calendar-plus",
+              "description": "Табели ОПР",
+              "link": "/engine/entity/opr-timesheets"
+            },
+            {
+              "code": "shift-task",
+              "title": "Сменное задание (ведомость)",
+              "permissionKey": "production:workshop-management:shift-task",
+              "icon": "pi pi-list",
+              "description": "Сменное задание",
+              "link": "/engine/entity/shift-task"
+            },
+            {
+              "code": "work-completion-vedomosti",
+              "title": "Ведомость выполнения работ",
+              "permissionKey": "production:workshop-management:work-completion-vedomosti",
+              "icon": "pi pi-list",
+              "description": "Выполнение работ",
+              "link": "/engine/entity/work-completion-vedomosti"
+            },
+            {
+              "code": "equipment-load-analysis",
+              "title": "Анализ загрузки оборудования",
+              "permissionKey": "production:workshop-management:equipment-load-analysis",
+              "icon": "pi pi-chart-pie",
+              "description": "Загрузка оборудования",
+              "link": "/engine/entity/equipment-load-analysis"
+            },
+            {
+              "code": "brigade-timesheets",
+              "title": "Табели учета рабочего времени в бригадах",
+              "permissionKey": "production:workshop-management:brigade-timesheets",
+              "icon": "pi pi-calendar-plus",
+              "description": "Табели бригад",
+              "link": "/engine/entity/brigade-timesheets"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "warehouse",
+      "title": "Склад",
+      "icon": "pi pi-box",
+      "contexts": [
+        {
+          "code": "issue-tmc",
+          "title": "Выдача ТМЦ со склада",
+          "entities": [
+            {
+              "code": "issue-tmc",
+              "title": "Выдача ТМЦ со склада",
+              "permissionKey": "warehouse:issue-tmc:issue-tmc",
+              "icon": "pi pi-upload",
+              "description": "Выдача ТМЦ со склада",
+              "link": "/engine/entity/issue-tmc"
+            }
+          ]
+        },
+        {
+          "code": "receive-tmc",
+          "title": "Прием ТМЦ на склад",
+          "entities": [
+            {
+              "code": "receive-tmc",
+              "title": "Прием ТМЦ на склад",
+              "permissionKey": "warehouse:receive-tmc:receive-tmc",
+              "icon": "pi pi-download",
+              "description": "Прием ТМЦ на склад",
+              "link": "/engine/entity/receive-tmc"
+            }
+          ]
+        },
+        {
+          "code": "placement-tmc",
+          "title": "Размещение ТМЦ на складе в МХ",
+          "entities": [
+            {
+              "code": "placement-tmc",
+              "title": "Размещение ТМЦ на складе в МХ",
+              "permissionKey": "warehouse:placement-tmc:placement-tmc",
+              "icon": "pi pi-th-large",
+              "description": "Размещение ТМЦ в местах хранения",
+              "link": "/engine/entity/placement-tmc"
+            }
+          ]
+        },
+        {
+          "code": "close-period",
+          "title": "Закрытие/смена расчетного периода",
+          "entities": [
+            {
+              "code": "close-period",
+              "title": "Закрытие/смена расчетного периода",
+              "permissionKey": "warehouse:close-period:close-period",
+              "icon": "pi pi-lock",
+              "description": "Смена расчетного периода",
+              "link": "/engine/entity/close-period"
+            }
+          ]
+        },
+        {
+          "code": "opening-balances",
+          "title": "Остатки номенклатуры на начало РП",
+          "entities": [
+            {
+              "code": "opening-balances",
+              "title": "Остатки номенклатуры на начало РП",
+              "permissionKey": "warehouse:opening-balances:opening-balances",
+              "icon": "pi pi-database",
+              "description": "Остатки на начало периода",
+              "link": "/engine/entity/opening-balances"
+            }
+          ]
+        },
+        {
+          "code": "current-balances",
+          "title": "Ведомость текущих остатков",
+          "entities": [
+            {
+              "code": "current-balances",
+              "title": "Ведомость текущих остатков",
+              "permissionKey": "warehouse:current-balances:current-balances",
+              "icon": "pi pi-list",
+              "description": "Текущие остатки",
+              "link": "/engine/entity/current-balances"
+            }
+          ]
+        },
+        {
+          "code": "warehouse-documents",
+          "title": "Документы складского учета",
+          "entities": [
+            {
+              "code": "waybills",
+              "title": "Накладные",
+              "permissionKey": "warehouse:warehouse-documents:waybills",
+              "icon": "pi pi-truck",
+              "description": "Накладные складского учета",
+              "link": "/engine/entity/waybills"
+            },
+            {
+              "code": "acts",
+              "title": "Акты",
+              "permissionKey": "warehouse:warehouse-documents:acts",
+              "icon": "pi pi-file",
+              "description": "Акты складского учета",
+              "link": "/engine/entity/acts"
+            },
+            {
+              "code": "requirements",
+              "title": "Требования",
+              "permissionKey": "warehouse:warehouse-documents:requirements",
+              "icon": "pi pi-file-edit",
+              "description": "Требования",
+              "link": "/engine/entity/requirements"
+            },
+            {
+              "code": "lzk",
+              "title": "ЛЗК",
+              "permissionKey": "warehouse:warehouse-documents:lzk",
+              "icon": "pi pi-file",
+              "description": "Лимитно-заборные карты",
+              "link": "/engine/entity/lzk"
+            },
+            {
+              "code": "warehouse-doc-journal",
+              "title": "Журнал документов складского учета",
+              "permissionKey": "warehouse:warehouse-documents:warehouse-doc-journal",
+              "icon": "pi pi-book",
+              "description": "Журнал документов",
+              "link": "/engine/entity/warehouse-doc-journal"
+            },
+            {
+              "code": "write-off-acts",
+              "title": "Акты списания в производство",
+              "permissionKey": "warehouse:warehouse-documents:write-off-acts",
+              "icon": "pi pi-file",
+              "description": "Списание в производство",
+              "link": "/engine/entity/write-off-acts"
+            },
+            {
+              "code": "use-in-assemblies-acts",
+              "title": "Акты использования в узлах",
+              "permissionKey": "warehouse:warehouse-documents:use-in-assemblies-acts",
+              "icon": "pi pi-file",
+              "description": "Использование в узлах",
+              "link": "/engine/entity/use-in-assemblies-acts"
+            },
+            {
+              "code": "lzk-cards",
+              "title": "Лимитно-заборные карты",
+              "permissionKey": "warehouse:warehouse-documents:lzk-cards",
+              "icon": "pi pi-file",
+              "description": "ЛЗК",
+              "link": "/engine/entity/lzk-cards"
+            },
+            {
+              "code": "material-issue-waybills",
+              "title": "Накладные на отпуск материалов",
+              "permissionKey": "warehouse:warehouse-documents:material-issue-waybills",
+              "icon": "pi pi-truck",
+              "description": "Отпуск материалов",
+              "link": "/engine/entity/material-issue-waybills"
+            },
+            {
+              "code": "product-release-waybills",
+              "title": "Накладные на выпуск продукции",
+              "permissionKey": "warehouse:warehouse-documents:product-release-waybills",
+              "icon": "pi pi-truck",
+              "description": "Выпуск продукции",
+              "link": "/engine/entity/product-release-waybills"
+            },
+            {
+              "code": "material-return-dept-waybills",
+              "title": "Накладные на возврат материалов (подразделению)",
+              "permissionKey": "warehouse:warehouse-documents:material-return-dept-waybills",
+              "icon": "pi pi-undo",
+              "description": "Возврат материалов подразделению",
+              "link": "/engine/entity/material-return-dept-waybills"
+            },
+            {
+              "code": "material-return-supplier-waybills",
+              "title": "Накладные на возврат материалов (поставщику)",
+              "permissionKey": "warehouse:warehouse-documents:material-return-supplier-waybills",
+              "icon": "pi pi-undo",
+              "description": "Возврат материалов поставщику",
+              "link": "/engine/entity/material-return-supplier-waybills"
+            },
+            {
+              "code": "goods-services-receipt-waybills",
+              "title": "Накладные на приход товаров и услуг",
+              "permissionKey": "warehouse:warehouse-documents:goods-services-receipt-waybills",
+              "icon": "pi pi-download",
+              "description": "Приход товаров и услуг",
+              "link": "/engine/entity/goods-services-receipt-waybills"
+            },
+            {
+              "code": "cooperation-receipt-waybills",
+              "title": "Накладные на приход услуг по кооперации",
+              "permissionKey": "warehouse:warehouse-documents:cooperation-receipt-waybills",
+              "icon": "pi pi-download",
+              "description": "Приход услуг по кооперации",
+              "link": "/engine/entity/cooperation-receipt-waybills"
+            },
+            {
+              "code": "goods-services-sale-waybills",
+              "title": "Накладные на реализацию товаров и услуг",
+              "permissionKey": "warehouse:warehouse-documents:goods-services-sale-waybills",
+              "icon": "pi pi-upload",
+              "description": "Реализация товаров и услуг",
+              "link": "/engine/entity/goods-services-sale-waybills"
+            },
+            {
+              "code": "material-receipt-requirements",
+              "title": "Требования на получение материалов",
+              "permissionKey": "warehouse:warehouse-documents:material-receipt-requirements",
+              "icon": "pi pi-file-edit",
+              "description": "Получение материалов",
+              "link": "/engine/entity/material-receipt-requirements"
+            },
+            {
+              "code": "components-requests",
+              "title": "Заявки на комплектующие",
+              "permissionKey": "warehouse:warehouse-documents:components-requests",
+              "icon": "pi pi-file-edit",
+              "description": "Заявки на комплектующие",
+              "link": "/engine/entity/components-requests"
+            }
+          ]
+        },
+        {
+          "code": "incoming-control",
+          "title": "Входной контроль ТМЦ",
+          "entities": [
+            {
+              "code": "vk-summary",
+              "title": "Сводная ведомость результатов ВК",
+              "permissionKey": "warehouse:incoming-control:vk-summary",
+              "icon": "pi pi-list",
+              "description": "Результаты входного контроля",
+              "link": "/engine/entity/vk-summary"
+            },
+            {
+              "code": "vk-defect-analysis",
+              "title": "Ведомости анализа брака, выявленного при входном контроле",
+              "permissionKey": "warehouse:incoming-control:vk-defect-analysis",
+              "icon": "pi pi-exclamation-circle",
+              "description": "Брак при входном контроле",
+              "link": "/engine/entity/vk-defect-analysis"
+            },
+            {
+              "code": "vk-acts",
+              "title": "Акты входного контроля",
+              "permissionKey": "warehouse:incoming-control:vk-acts",
+              "icon": "pi pi-file",
+              "description": "Акты входного контроля",
+              "link": "/engine/entity/vk-acts"
+            }
+          ]
+        },
+        {
+          "code": "reservation",
+          "title": "Резервирование ТМЦ",
+          "entities": [
+            {
+              "code": "reserve-documents",
+              "title": "Документы резерва",
+              "permissionKey": "warehouse:reservation:reserve-documents",
+              "icon": "pi pi-lock",
+              "description": "Документы резерва",
+              "link": "/engine/entity/reserve-documents"
+            }
+          ]
+        },
+        {
+          "code": "inventory",
+          "title": "Инвентаризация ТМЦ",
+          "entities": [
+            {
+              "code": "inv-3-list",
+              "title": "Инвентаризационная опись (ИНВ-3)",
+              "permissionKey": "warehouse:inventory:inv-3-list",
+              "icon": "pi pi-list",
+              "description": "Опись ИНВ-3",
+              "link": "/engine/entity/inv-3-list"
+            },
+            {
+              "code": "inventory-acts",
+              "title": "Акты инвентаризации",
+              "permissionKey": "warehouse:inventory:inventory-acts",
+              "icon": "pi pi-file",
+              "description": "Акты инвентаризации",
+              "link": "/engine/entity/inventory-acts"
+            },
+            {
+              "code": "revision-waybills",
+              "title": "Накладные на ревизию остатков",
+              "permissionKey": "warehouse:inventory:revision-waybills",
+              "icon": "pi pi-truck",
+              "description": "Ревизия остатков",
+              "link": "/engine/entity/revision-waybills"
+            }
+          ]
+        },
+        {
+          "code": "warehouse-vedomosti",
+          "title": "Ведомости складского учета",
+          "entities": [
+            {
+              "code": "warehouse-card",
+              "title": "Складская карточка",
+              "permissionKey": "warehouse:warehouse-vedomosti:warehouse-card",
+              "icon": "pi pi-id-card",
+              "description": "Складская карточка",
+              "link": "/engine/entity/warehouse-card"
+            },
+            {
+              "code": "turnover-sheet",
+              "title": "Оборотная ведомость",
+              "permissionKey": "warehouse:warehouse-vedomosti:turnover-sheet",
+              "icon": "pi pi-list",
+              "description": "Оборотная ведомость",
+              "link": "/engine/entity/turnover-sheet"
+            },
+            {
+              "code": "material-inflow",
+              "title": "Поступление материалов за период",
+              "permissionKey": "warehouse:warehouse-vedomosti:material-inflow",
+              "icon": "pi pi-download",
+              "description": "Поступление материалов",
+              "link": "/engine/entity/material-inflow"
+            },
+            {
+              "code": "material-outflow",
+              "title": "Расход материалов за период",
+              "permissionKey": "warehouse:warehouse-vedomosti:material-outflow",
+              "icon": "pi pi-upload",
+              "description": "Расход материалов",
+              "link": "/engine/entity/material-outflow"
+            },
+            {
+              "code": "product-output",
+              "title": "Выпуск продукции",
+              "permissionKey": "warehouse:warehouse-vedomosti:product-output",
+              "icon": "pi pi-box",
+              "description": "Выпуск продукции",
+              "link": "/engine/entity/product-output"
+            },
+            {
+              "code": "nomenclature-write-off",
+              "title": "Списание номенклатуры за период",
+              "permissionKey": "warehouse:warehouse-vedomosti:nomenclature-write-off",
+              "icon": "pi pi-times-circle",
+              "description": "Списание номенклатуры",
+              "link": "/engine/entity/nomenclature-write-off"
+            },
+            {
+              "code": "nomenclature-availability",
+              "title": "Наличие номенклатуры",
+              "permissionKey": "warehouse:warehouse-vedomosti:nomenclature-availability",
+              "icon": "pi pi-database",
+              "description": "Наличие номенклатуры",
+              "link": "/engine/entity/nomenclature-availability"
+            },
+            {
+              "code": "nomenclature-by-locations",
+              "title": "Номенклатура по местам хранения",
+              "permissionKey": "warehouse:warehouse-vedomosti:nomenclature-by-locations",
+              "icon": "pi pi-th-large",
+              "description": "По местам хранения",
+              "link": "/engine/entity/nomenclature-by-locations"
+            },
+            {
+              "code": "warehouse-loading",
+              "title": "Загрузка складов",
+              "permissionKey": "warehouse:warehouse-vedomosti:warehouse-loading",
+              "icon": "pi pi-chart-pie",
+              "description": "Загрузка складов",
+              "link": "/engine/entity/warehouse-loading"
+            },
+            {
+              "code": "precious-metals-consumption",
+              "title": "Расход ДМ",
+              "permissionKey": "warehouse:warehouse-vedomosti:precious-metals-consumption",
+              "icon": "pi pi-star",
+              "description": "Расход драгметаллов",
+              "link": "/engine/entity/precious-metals-consumption"
+            },
+            {
+              "code": "precious-metals-turnover",
+              "title": "Оборотная ведомость по ДМ",
+              "permissionKey": "warehouse:warehouse-vedomosti:precious-metals-turnover",
+              "icon": "pi pi-list",
+              "description": "Оборотная ведомость по ДМ",
+              "link": "/engine/entity/precious-metals-turnover"
+            },
+            {
+              "code": "precious-metals-inventory",
+              "title": "Инвентаризационная опись ДМ",
+              "permissionKey": "warehouse:warehouse-vedomosti:precious-metals-inventory",
+              "icon": "pi pi-list",
+              "description": "Инвентаризация ДМ",
+              "link": "/engine/entity/precious-metals-inventory"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "procurement",
+      "title": "Закупки и кооперация",
+      "icon": "pi pi-shopping-cart",
+      "contexts": [
+        {
+          "code": "supplier-analysis",
+          "title": "Ведомость анализа поставщиков",
+          "entities": [
+            {
+              "code": "supplier-analysis",
+              "title": "Ведомость анализа поставщиков",
+              "permissionKey": "procurement:supplier-analysis:supplier-analysis",
+              "icon": "pi pi-chart-bar",
+              "description": "Анализ поставщиков",
+              "link": "/engine/entity/supplier-analysis"
+            }
+          ]
+        },
+        {
+          "code": "purchases",
+          "title": "Закупки",
+          "entities": [
+            {
+              "code": "supplier-requests-purchases",
+              "title": "Заявки поставщикам на закупки",
+              "permissionKey": "procurement:purchases:supplier-requests-purchases",
+              "icon": "pi pi-file-edit",
+              "description": "Заявки поставщикам",
+              "link": "/engine/entity/supplier-requests-purchases"
+            },
+            {
+              "code": "supplier-orders-purchases",
+              "title": "Заказы поставщикам на закупки",
+              "permissionKey": "procurement:purchases:supplier-orders-purchases",
+              "icon": "pi pi-shopping-cart",
+              "description": "Заказы поставщикам",
+              "link": "/engine/entity/supplier-orders-purchases"
+            },
+            {
+              "code": "purchases-supplies-state",
+              "title": "Состояние закупок и поставок",
+              "permissionKey": "procurement:purchases:purchases-supplies-state",
+              "icon": "pi pi-info-circle",
+              "description": "Состояние закупок",
+              "link": "/engine/entity/purchases-supplies-state"
+            },
+            {
+              "code": "purchases-planning",
+              "title": "Планирование закупок",
+              "permissionKey": "procurement:purchases:purchases-planning",
+              "icon": "pi pi-calendar",
+              "description": "Планирование закупок",
+              "link": "/engine/entity/purchases-planning"
+            },
+            {
+              "code": "supplies-planning",
+              "title": "Планирование поставок",
+              "permissionKey": "procurement:purchases:supplies-planning",
+              "icon": "pi pi-calendar",
+              "description": "Планирование поставок",
+              "link": "/engine/entity/supplies-planning"
+            }
+          ]
+        },
+        {
+          "code": "cooperation",
+          "title": "Кооперация/Переработки",
+          "entities": [
+            {
+              "code": "supplier-requests-coop-tmc",
+              "title": "Заявки поставщикам на кооперацию (ТМЦ)",
+              "permissionKey": "procurement:cooperation:supplier-requests-coop-tmc",
+              "icon": "pi pi-file-edit",
+              "description": "Заявки на кооперацию ТМЦ",
+              "link": "/engine/entity/supplier-requests-coop-tmc"
+            },
+            {
+              "code": "supplier-orders-coop-tmc",
+              "title": "Заказы поставщикам на кооперацию (ТМЦ)",
+              "permissionKey": "procurement:cooperation:supplier-orders-coop-tmc",
+              "icon": "pi pi-shopping-cart",
+              "description": "Заказы на кооперацию ТМЦ",
+              "link": "/engine/entity/supplier-orders-coop-tmc"
+            },
+            {
+              "code": "supplier-requests-processing",
+              "title": "Заявки поставщикам на переработки (услуги)",
+              "permissionKey": "procurement:cooperation:supplier-requests-processing",
+              "icon": "pi pi-file-edit",
+              "description": "Заявки на переработки",
+              "link": "/engine/entity/supplier-requests-processing"
+            },
+            {
+              "code": "supplier-orders-processing",
+              "title": "Заказы поставщикам на переработки (услуги)",
+              "permissionKey": "procurement:cooperation:supplier-orders-processing",
+              "icon": "pi pi-shopping-cart",
+              "description": "Заказы на переработки",
+              "link": "/engine/entity/supplier-orders-processing"
+            },
+            {
+              "code": "processings",
+              "title": "Переработки",
+              "permissionKey": "procurement:cooperation:processings",
+              "icon": "pi pi-sync",
+              "description": "Переработки",
+              "link": "/engine/entity/processings"
+            },
+            {
+              "code": "processings-planning",
+              "title": "Планирование переработок (услуги)",
+              "permissionKey": "procurement:cooperation:processings-planning",
+              "icon": "pi pi-calendar",
+              "description": "Планирование переработок",
+              "link": "/engine/entity/processings-planning"
+            },
+            {
+              "code": "processing-supplies-schedule",
+              "title": "График поставок (услуг по переработкам)",
+              "permissionKey": "procurement:cooperation:processing-supplies-schedule",
+              "icon": "pi pi-calendar",
+              "description": "График поставок услуг",
+              "link": "/engine/entity/processing-supplies-schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "sales",
+      "title": "Продажи",
+      "icon": "pi pi-chart-line",
+      "contexts": [
+        {
+          "code": "sales-orders",
+          "title": "Заказы на продажу",
+          "entities": [
+            {
+              "code": "sales-orders",
+              "title": "Заказы на продажу",
+              "permissionKey": "sales:sales-orders:sales-orders",
+              "icon": "pi pi-shopping-cart",
+              "description": "Заказы клиентов",
+              "link": "/engine/entity/sales-orders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "economic-analysis",
+      "title": "ТЭА",
+      "icon": "pi pi-chart-bar",
+      "contexts": [
+        {
+          "code": "contracts-management",
+          "title": "Ведение договоров",
+          "entities": [
+            {
+              "code": "contracts-management",
+              "title": "Ведение договоров",
+              "permissionKey": "economic-analysis:contracts-management:contracts-management",
+              "icon": "pi pi-file-edit",
+              "description": "Ведение договоров",
+              "link": "/engine/entity/contracts-management"
+            }
+          ]
+        },
+        {
+          "code": "product-cost",
+          "title": "Себестоимость продукции",
+          "entities": [
+            {
+              "code": "costings",
+              "title": "Калькуляции",
+              "permissionKey": "economic-analysis:product-cost:costings",
+              "icon": "pi pi-calculator",
+              "description": "Калькуляции себестоимости",
+              "link": "/engine/entity/costings"
+            },
+            {
+              "code": "direct-costs-vedomosti",
+              "title": "Ведомости прямых затрат",
+              "permissionKey": "economic-analysis:product-cost:direct-costs-vedomosti",
+              "icon": "pi pi-list",
+              "description": "Прямые затраты",
+              "link": "/engine/entity/direct-costs-vedomosti"
+            },
+            {
+              "code": "cost-distribution",
+              "title": "Ведомость распределения затрат",
+              "permissionKey": "economic-analysis:product-cost:cost-distribution",
+              "icon": "pi pi-chart-bar",
+              "description": "Распределение затрат",
+              "link": "/engine/entity/cost-distribution"
+            },
+            {
+              "code": "planned-material-costs",
+              "title": "Ведомость плановых материальных затрат",
+              "permissionKey": "economic-analysis:product-cost:planned-material-costs",
+              "icon": "pi pi-list",
+              "description": "Плановые материальные затраты",
+              "link": "/engine/entity/planned-material-costs"
+            },
+            {
+              "code": "actual-material-costs",
+              "title": "Ведомость фактических материальных затрат",
+              "permissionKey": "economic-analysis:product-cost:actual-material-costs",
+              "icon": "pi pi-list",
+              "description": "Фактические материальные затраты",
+              "link": "/engine/entity/actual-material-costs"
+            },
+            {
+              "code": "planned-labor-costs",
+              "title": "Ведомость плановых трудовых затрат",
+              "permissionKey": "economic-analysis:product-cost:planned-labor-costs",
+              "icon": "pi pi-list",
+              "description": "Плановые трудовые затраты",
+              "link": "/engine/entity/planned-labor-costs"
+            },
+            {
+              "code": "actual-labor-costs",
+              "title": "Ведомость фактических трудовых затрат",
+              "permissionKey": "economic-analysis:product-cost:actual-labor-costs",
+              "icon": "pi pi-list",
+              "description": "Фактические трудовые затраты",
+              "link": "/engine/entity/actual-labor-costs"
+            },
+            {
+              "code": "period-actual-costs",
+              "title": "Ведомость фактических затрат за период",
+              "permissionKey": "economic-analysis:product-cost:period-actual-costs",
+              "icon": "pi pi-list",
+              "description": "Фактические затраты за период",
+              "link": "/engine/entity/period-actual-costs"
+            },
+            {
+              "code": "plan-fact-batch-analysis",
+              "title": "План-фактный анализ партий ДСЕ",
+              "permissionKey": "economic-analysis:product-cost:plan-fact-batch-analysis",
+              "icon": "pi pi-chart-line",
+              "description": "План-фактный анализ",
+              "link": "/engine/entity/plan-fact-batch-analysis"
+            },
+            {
+              "code": "reference-costings",
+              "title": "Эталонные калькуляции",
+              "permissionKey": "economic-analysis:product-cost:reference-costings",
+              "icon": "pi pi-star",
+              "description": "Эталонные калькуляции",
+              "link": "/engine/entity/reference-costings"
+            },
+            {
+              "code": "planned-costings",
+              "title": "Плановые калькуляции",
+              "permissionKey": "economic-analysis:product-cost:planned-costings",
+              "icon": "pi pi-calculator",
+              "description": "Плановые калькуляции",
+              "link": "/engine/entity/planned-costings"
+            },
+            {
+              "code": "actual-costings",
+              "title": "Фактические калькуляции",
+              "permissionKey": "economic-analysis:product-cost:actual-costings",
+              "icon": "pi pi-calculator",
+              "description": "Фактические калькуляции",
+              "link": "/engine/entity/actual-costings"
+            }
+          ]
+        },
+        {
+          "code": "workload-distribution",
+          "title": "Ведомости распределения загрузки производства",
+          "entities": [
+            {
+              "code": "workload-by-op-types",
+              "title": "Ведомость распределения загрузки по видам операций",
+              "permissionKey": "economic-analysis:workload-distribution:workload-by-op-types",
+              "icon": "pi pi-list",
+              "description": "Загрузка по видам операций",
+              "link": "/engine/entity/workload-by-op-types"
+            },
+            {
+              "code": "production-load",
+              "title": "Загрузка производства",
+              "permissionKey": "economic-analysis:workload-distribution:production-load",
+              "icon": "pi pi-chart-bar",
+              "description": "Загрузка производства",
+              "link": "/engine/entity/production-load"
+            },
+            {
+              "code": "monthly-load-agg",
+              "title": "Укрупненное распределение загрузки по месяцам (НГ)",
+              "permissionKey": "economic-analysis:workload-distribution:monthly-load-agg",
+              "icon": "pi pi-calendar",
+              "description": "Распределение по месяцам",
+              "link": "/engine/entity/monthly-load-agg"
+            },
+            {
+              "code": "equipment-load-by-orders",
+              "title": "Ведомость загрузки номенклатуры оборудования (по нарядам)",
+              "permissionKey": "economic-analysis:workload-distribution:equipment-load-by-orders",
+              "icon": "pi pi-desktop",
+              "description": "Загрузка оборудования",
+              "link": "/engine/entity/equipment-load-by-orders"
+            },
+            {
+              "code": "capacity-load-brigade-orders",
+              "title": "Ведомость загрузки мощностей (РЦ по бригадным нарядам)",
+              "permissionKey": "economic-analysis:workload-distribution:capacity-load-brigade-orders",
+              "icon": "pi pi-chart-pie",
+              "description": "Загрузка мощностей",
+              "link": "/engine/entity/capacity-load-brigade-orders"
+            },
+            {
+              "code": "personnel-load-by-orders",
+              "title": "Ведомость загрузки персонала (по нарядам)",
+              "permissionKey": "economic-analysis:workload-distribution:personnel-load-by-orders",
+              "icon": "pi pi-users",
+              "description": "Загрузка персонала",
+              "link": "/engine/entity/personnel-load-by-orders"
+            },
+            {
+              "code": "dept-load-schedules",
+              "title": "Графики загрузки подразделения",
+              "permissionKey": "economic-analysis:workload-distribution:dept-load-schedules",
+              "icon": "pi pi-calendar",
+              "description": "Графики загрузки",
+              "link": "/engine/entity/dept-load-schedules"
+            }
+          ]
+        },
+        {
+          "code": "general-ledger",
+          "title": "Главная книга",
+          "entities": [
+            {
+              "code": "operations-journal",
+              "title": "Журнал операций",
+              "permissionKey": "economic-analysis:general-ledger:operations-journal",
+              "icon": "pi pi-book",
+              "description": "Журнал операций",
+              "link": "/engine/entity/operations-journal"
+            },
+            {
+              "code": "bank-statements",
+              "title": "Банковские выписки",
+              "permissionKey": "economic-analysis:general-ledger:bank-statements",
+              "icon": "pi pi-credit-card",
+              "description": "Банковские выписки",
+              "link": "/engine/entity/bank-statements"
+            },
+            {
+              "code": "payment-orders",
+              "title": "Платежные поручения",
+              "permissionKey": "economic-analysis:general-ledger:payment-orders",
+              "icon": "pi pi-money-bill",
+              "description": "Платежные поручения",
+              "link": "/engine/entity/payment-orders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "design-prep",
+      "title": "КТПП",
+      "icon": "pi pi-map",
+      "contexts": [
+        {
+          "code": "cts",
+          "title": "Конструкторско-технологические спецификации (КТС)",
+          "entities": [
+            {
+              "code": "cts",
+              "title": "Конструкторско-технологические спецификации (КТС)",
+              "permissionKey": "design-prep:cts:cts",
+              "icon": "pi pi-map",
+              "description": "КТС",
+              "link": "/engine/entity/cts"
+            }
+          ]
+        },
+        {
+          "code": "cts-vedomosti",
+          "title": "Ведомости КТС",
+          "entities": [
+            {
+              "code": "product-composition",
+              "title": "Конструкторский состав изделия",
+              "permissionKey": "design-prep:cts-vedomosti:product-composition",
+              "icon": "pi pi-map",
+              "description": "Состав изделия",
+              "link": "/engine/entity/product-composition"
+            },
+            {
+              "code": "part-inclusion-vedomost",
+              "title": "Ведомость подетальной входимости",
+              "permissionKey": "design-prep:cts-vedomosti:part-inclusion-vedomost",
+              "icon": "pi pi-list",
+              "description": "Подетальная входимость",
+              "link": "/engine/entity/part-inclusion-vedomost"
+            },
+            {
+              "code": "assembly-vedomost",
+              "title": "Комплектовочная ведомость",
+              "permissionKey": "design-prep:cts-vedomosti:assembly-vedomost",
+              "icon": "pi pi-list",
+              "description": "Комплектовочная ведомость",
+              "link": "/engine/entity/assembly-vedomost"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "equipment",
+      "title": "Оборудование и ТОиР",
+      "icon": "pi pi-desktop",
+      "contexts": [
+        {
+          "code": "equipment-nomenclature",
+          "title": "Номенклатура оборудования",
+          "entities": [
+            {
+              "code": "equipment-nomenclature",
+              "title": "Номенклатура оборудования",
+              "permissionKey": "equipment:equipment-nomenclature:equipment-nomenclature",
+              "icon": "pi pi-desktop",
+              "description": "Справочник оборудования",
+              "link": "/engine/entity/equipment-nomenclature"
+            }
+          ]
+        },
+        {
+          "code": "work-centers",
+          "title": "Рабочие центры",
+          "entities": [
+            {
+              "code": "work-centers",
+              "title": "Рабочие центры",
+              "permissionKey": "equipment:work-centers:work-centers",
+              "icon": "pi pi-building",
+              "description": "Рабочие центры",
+              "link": "/engine/entity/work-centers"
+            }
+          ]
+        },
+        {
+          "code": "equipment-work-types",
+          "title": "Виды работ оборудования",
+          "entities": [
+            {
+              "code": "equipment-work-types",
+              "title": "Виды работ оборудования",
+              "permissionKey": "equipment:equipment-work-types:equipment-work-types",
+              "icon": "pi pi-cog",
+              "description": "Виды работ оборудования",
+              "link": "/engine/entity/equipment-work-types"
+            }
+          ]
+        },
+        {
+          "code": "equipment-schedules",
+          "title": "Графики работы оборудования",
+          "entities": [
+            {
+              "code": "equipment-schedules",
+              "title": "Графики работы оборудования",
+              "permissionKey": "equipment:equipment-schedules:equipment-schedules",
+              "icon": "pi pi-calendar",
+              "description": "Графики работы оборудования",
+              "link": "/engine/entity/equipment-schedules"
+            }
+          ]
+        },
+        {
+          "code": "maintenance-schedule",
+          "title": "График и ведомости ТОиР",
+          "entities": [
+            {
+              "code": "maintenance-schedule",
+              "title": "График и ведомости ТОиР",
+              "permissionKey": "equipment:maintenance-schedule:maintenance-schedule",
+              "icon": "pi pi-wrench",
+              "description": "ТОиР оборудования",
+              "link": "/engine/entity/maintenance-schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "personnel",
+      "title": "Персонал",
+      "icon": "pi pi-users",
+      "contexts": [
+        {
+          "code": "norm-references",
+          "title": "Нормативные справочники",
+          "entities": [
+            {
+              "code": "personnel-schedules",
+              "title": "Графики работы персонала",
+              "permissionKey": "personnel:norm-references:personnel-schedules",
+              "icon": "pi pi-calendar",
+              "description": "Графики работы персонала",
+              "link": "/engine/entity/personnel-schedules"
+            },
+            {
+              "code": "worker-categories",
+              "title": "Категории работников",
+              "permissionKey": "personnel:norm-references:worker-categories",
+              "icon": "pi pi-tags",
+              "description": "Категории работников",
+              "link": "/engine/entity/worker-categories"
+            },
+            {
+              "code": "time-tracking-codes",
+              "title": "Классификатор кодов таб.учета",
+              "permissionKey": "personnel:norm-references:time-tracking-codes",
+              "icon": "pi pi-list",
+              "description": "Коды табельного учета",
+              "link": "/engine/entity/time-tracking-codes"
+            },
+            {
+              "code": "production-calendar",
+              "title": "Производственный календарь",
+              "permissionKey": "personnel:norm-references:production-calendar",
+              "icon": "pi pi-calendar",
+              "description": "Производственный календарь",
+              "link": "/engine/entity/production-calendar"
+            },
+            {
+              "code": "professions",
+              "title": "Профессии",
+              "permissionKey": "personnel:norm-references:professions",
+              "icon": "pi pi-briefcase",
+              "description": "Профессии",
+              "link": "/engine/entity/professions"
+            },
+            {
+              "code": "tariff-grid",
+              "title": "Тарифная сетка",
+              "permissionKey": "personnel:norm-references:tariff-grid",
+              "icon": "pi pi-table",
+              "description": "Тарифная сетка",
+              "link": "/engine/entity/tariff-grid"
+            },
+            {
+              "code": "staff-schedule",
+              "title": "Штатное расписание",
+              "permissionKey": "personnel:norm-references:staff-schedule",
+              "icon": "pi pi-briefcase",
+              "description": "Штатное расписание",
+              "link": "/engine/entity/staff-schedule"
+            }
+          ]
+        },
+        {
+          "code": "workers",
+          "title": "Работники",
+          "entities": [
+            {
+              "code": "brigades",
+              "title": "Бригады",
+              "permissionKey": "personnel:workers:brigades",
+              "icon": "pi pi-users",
+              "description": "Бригады",
+              "link": "/engine/entity/brigades"
+            },
+            {
+              "code": "staff-units",
+              "title": "Штатные единицы",
+              "permissionKey": "personnel:workers:staff-units",
+              "icon": "pi pi-briefcase",
+              "description": "Штатные единицы",
+              "link": "/engine/entity/staff-units"
+            },
+            {
+              "code": "worker-cards",
+              "title": "Карточки работников",
+              "permissionKey": "personnel:workers:worker-cards",
+              "icon": "pi pi-id-card",
+              "description": "Карточки работников",
+              "link": "/engine/entity/worker-cards"
+            },
+            {
+              "code": "workers",
+              "title": "Работники",
+              "permissionKey": "personnel:workers:workers",
+              "icon": "pi pi-users",
+              "description": "Работники",
+              "link": "/engine/entity/workers"
+            }
+          ]
+        },
+        {
+          "code": "time-tracking",
+          "title": "Табельный учет",
+          "entities": [
+            {
+              "code": "timesheet",
+              "title": "Табель учета рабочего времени",
+              "permissionKey": "personnel:time-tracking:timesheet",
+              "icon": "pi pi-calendar-plus",
+              "description": "Табель учета рабочего времени",
+              "link": "/engine/entity/timesheet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "dictionary",
+      "title": "Справочники",
+      "icon": "pi pi-book",
+      "contexts": [
+        {
+          "code": "enterprise",
+          "title": "Предприятие",
+          "entities": [
+            {
+              "code": "departments",
+              "title": "Подразделения",
+              "permissionKey": "dictionary:enterprise:departments",
+              "icon": "pi pi-map",
+              "description": "Оргструктура компании",
+              "link": "/engine/entity/departments"
+            },
+            {
+              "code": "route-elements",
+              "title": "Элементы маршрутов",
+              "permissionKey": "dictionary:enterprise:route-elements",
+              "icon": "pi pi-map",
+              "description": "Элементы маршрутов",
+              "link": "/engine/entity/route-elements"
+            },
+            {
+              "code": "storage-locations",
+              "title": "Места хранения",
+              "permissionKey": "dictionary:enterprise:storage-locations",
+              "icon": "pi pi-th-large",
+              "description": "Места хранения",
+              "link": "/engine/entity/storage-locations"
+            },
+            {
+              "code": "storage-location-purpose",
+              "title": "Назначение мест хранения",
+              "permissionKey": "dictionary:enterprise:storage-location-purpose",
+              "icon": "pi pi-th-large",
+              "description": "Назначение мест хранения",
+              "link": "/engine/entity/storage-location-purpose"
+            }
+          ]
+        },
+        {
+          "code": "nomenclature",
+          "title": "Номенклатура",
+          "entities": [
+            {
+              "code": "nomenclature-groups",
+              "title": "Номенклатурные группы",
+              "permissionKey": "dictionary:nomenclature:nomenclature-groups",
+              "icon": "pi pi-tags",
+              "description": "Номенклатурные группы",
+              "link": "/engine/entity/nomenclature-groups"
+            },
+            {
+              "code": "nomenclature-summary",
+              "title": "Номенклатура (свод)",
+              "permissionKey": "dictionary:nomenclature:nomenclature-summary",
+              "icon": "pi pi-box",
+              "description": "Сводная номенклатура",
+              "link": "/engine/entity/nomenclature-summary"
+            },
+            {
+              "code": "nomenclature-dsе",
+              "title": "Номенклатура ДСЕ",
+              "permissionKey": "dictionary:nomenclature:nomenclature-dsе",
+              "icon": "pi pi-box",
+              "description": "Номенклатура ДСЕ",
+              "link": "/engine/entity/nomenclature-dsе"
+            },
+            {
+              "code": "nomenclature-standard",
+              "title": "Номенклатура стандартных изделий",
+              "permissionKey": "dictionary:nomenclature:nomenclature-standard",
+              "icon": "pi pi-box",
+              "description": "Стандартные изделия",
+              "link": "/engine/entity/nomenclature-standard"
+            },
+            {
+              "code": "nomenclature-other",
+              "title": "Номенклатура прочих изделий",
+              "permissionKey": "dictionary:nomenclature:nomenclature-other",
+              "icon": "pi pi-box",
+              "description": "Прочие изделия",
+              "link": "/engine/entity/nomenclature-other"
+            },
+            {
+              "code": "nomenclature-materials",
+              "title": "Номенклатура материалов",
+              "permissionKey": "dictionary:nomenclature:nomenclature-materials",
+              "icon": "pi pi-database",
+              "description": "Материалы",
+              "link": "/engine/entity/nomenclature-materials"
+            },
+            {
+              "code": "nomenclature-tooling",
+              "title": "Номенклатура оснастки",
+              "permissionKey": "dictionary:nomenclature:nomenclature-tooling",
+              "icon": "pi pi-wrench",
+              "description": "Оснастка",
+              "link": "/engine/entity/nomenclature-tooling"
+            },
+            {
+              "code": "nomenclature-services",
+              "title": "Номенклатура услуг",
+              "permissionKey": "dictionary:nomenclature:nomenclature-services",
+              "icon": "pi pi-briefcase",
+              "description": "Услуги",
+              "link": "/engine/entity/nomenclature-services"
+            },
+            {
+              "code": "nomenclature-batches",
+              "title": "Партии номенклатуры",
+              "permissionKey": "dictionary:nomenclature:nomenclature-batches",
+              "icon": "pi pi-box",
+              "description": "Партии номенклатуры",
+              "link": "/engine/entity/nomenclature-batches"
+            }
+          ]
+        },
+        {
+          "code": "production-documents",
+          "title": "Распорядительные документы производства",
+          "entities": [
+            {
+              "code": "resolution-templates",
+              "title": "Шаблоны резолюций",
+              "permissionKey": "dictionary:production-documents:resolution-templates",
+              "icon": "pi pi-file-edit",
+              "description": "Шаблоны резолюций",
+              "link": "/engine/entity/resolution-templates"
+            },
+            {
+              "code": "shpz-grounds",
+              "title": "Основания для ШПЗ",
+              "permissionKey": "dictionary:production-documents:shpz-grounds",
+              "icon": "pi pi-list",
+              "description": "Основания для ШПЗ",
+              "link": "/engine/entity/shpz-grounds"
+            },
+            {
+              "code": "order-grounds",
+              "title": "Основания для заказа",
+              "permissionKey": "dictionary:production-documents:order-grounds",
+              "icon": "pi pi-list",
+              "description": "Основания для заказа",
+              "link": "/engine/entity/order-grounds"
+            },
+            {
+              "code": "close-decisions",
+              "title": "Решения о закрытии",
+              "permissionKey": "dictionary:production-documents:close-decisions",
+              "icon": "pi pi-file",
+              "description": "Решения о закрытии",
+              "link": "/engine/entity/close-decisions"
+            },
+            {
+              "code": "launch-decisions",
+              "title": "Решения о запуске",
+              "permissionKey": "dictionary:production-documents:launch-decisions",
+              "icon": "pi pi-file",
+              "description": "Решения о запуске",
+              "link": "/engine/entity/launch-decisions"
+            },
+            {
+              "code": "cancel-decisions",
+              "title": "Решения об аннулировании",
+              "permissionKey": "dictionary:production-documents:cancel-decisions",
+              "icon": "pi pi-file",
+              "description": "Решения об аннулировании",
+              "link": "/engine/entity/cancel-decisions"
+            },
+            {
+              "code": "stage-approval-docs",
+              "title": "Документы для утверждения этапов ПП",
+              "permissionKey": "dictionary:production-documents:stage-approval-docs",
+              "icon": "pi pi-file",
+              "description": "Документы для утверждения",
+              "link": "/engine/entity/stage-approval-docs"
+            }
+          ]
+        },
+        {
+          "code": "contractors",
+          "title": "Контрагенты",
+          "entities": [
+            {
+              "code": "contact-persons",
+              "title": "Контактные лица",
+              "permissionKey": "dictionary:contractors:contact-persons",
+              "icon": "pi pi-address-book",
+              "description": "Контактные лица",
+              "link": "/engine/entity/contact-persons"
+            },
+            {
+              "code": "counterparties",
+              "title": "Контрагенты",
+              "permissionKey": "dictionary:contractors:counterparties",
+              "icon": "pi pi-id-card",
+              "description": "Контрагенты",
+              "link": "/engine/entity/counterparties"
+            },
+            {
+              "code": "counterparty-criteria",
+              "title": "Критерии контрагентов",
+              "permissionKey": "dictionary:contractors:counterparty-criteria",
+              "icon": "pi pi-list",
+              "description": "Критерии контрагентов",
+              "link": "/engine/entity/counterparty-criteria"
+            },
+            {
+              "code": "counterparty-categories",
+              "title": "Категории контрагентов",
+              "permissionKey": "dictionary:contractors:counterparty-categories",
+              "icon": "pi pi-tags",
+              "description": "Категории контрагентов",
+              "link": "/engine/entity/counterparty-categories"
+            },
+            {
+              "code": "counterparty-types",
+              "title": "Тип контрагента",
+              "permissionKey": "dictionary:contractors:counterparty-types",
+              "icon": "pi pi-tags",
+              "description": "Типы контрагентов",
+              "link": "/engine/entity/counterparty-types"
+            }
+          ]
+        },
+        {
+          "code": "planning",
+          "title": "Планирование",
+          "entities": [
+            {
+              "code": "product-complexity-groups",
+              "title": "Группы сложности продукции",
+              "permissionKey": "dictionary:planning:product-complexity-groups",
+              "icon": "pi pi-tags",
+              "description": "Группы сложности продукции",
+              "link": "/engine/entity/product-complexity-groups"
+            },
+            {
+              "code": "production-complexity-groups",
+              "title": "Группы сложности производства",
+              "permissionKey": "dictionary:planning:production-complexity-groups",
+              "icon": "pi pi-tags",
+              "description": "Группы сложности производства",
+              "link": "/engine/entity/production-complexity-groups"
+            },
+            {
+              "code": "transit-time",
+              "title": "Транзитное время",
+              "permissionKey": "dictionary:planning:transit-time",
+              "icon": "pi pi-clock",
+              "description": "Транзитное время",
+              "link": "/engine/entity/transit-time"
+            },
+            {
+              "code": "critical-resources",
+              "title": "Критические ресурсы",
+              "permissionKey": "dictionary:planning:critical-resources",
+              "icon": "pi pi-exclamation-triangle",
+              "description": "Критические ресурсы",
+              "link": "/engine/entity/critical-resources"
+            }
+          ]
+        },
+        {
+          "code": "tech-operations",
+          "title": "Техоперации",
+          "entities": [
+            {
+              "code": "work-types",
+              "title": "Виды работ",
+              "permissionKey": "dictionary:tech-operations:work-types",
+              "icon": "pi pi-cog",
+              "description": "Виды работ",
+              "link": "/engine/entity/work-types"
+            },
+            {
+              "code": "tech-op-types",
+              "title": "Виды техопераций",
+              "permissionKey": "dictionary:tech-operations:tech-op-types",
+              "icon": "pi pi-cog",
+              "description": "Виды техопераций",
+              "link": "/engine/entity/tech-op-types"
+            },
+            {
+              "code": "tech-operations",
+              "title": "Техоперации",
+              "permissionKey": "dictionary:tech-operations:tech-operations",
+              "icon": "pi pi-cog",
+              "description": "Техоперации",
+              "link": "/engine/entity/tech-operations"
+            }
+          ]
+        },
+        {
+          "code": "work-schedules",
+          "title": "Графики работы",
+          "entities": [
+            {
+              "code": "working-periods",
+              "title": "Рабочие периоды",
+              "permissionKey": "dictionary:work-schedules:working-periods",
+              "icon": "pi pi-calendar",
+              "description": "Рабочие периоды",
+              "link": "/engine/entity/working-periods"
+            },
+            {
+              "code": "shifts",
+              "title": "Смены",
+              "permissionKey": "dictionary:work-schedules:shifts",
+              "icon": "pi pi-clock",
+              "description": "Смены",
+              "link": "/engine/entity/shifts"
+            },
+            {
+              "code": "schedule-templates",
+              "title": "Графики (шаблоны)",
+              "permissionKey": "dictionary:work-schedules:schedule-templates",
+              "icon": "pi pi-calendar",
+              "description": "Шаблоны графиков",
+              "link": "/engine/entity/schedule-templates"
+            }
+          ]
+        },
+        {
+          "code": "codes",
+          "title": "Шифры",
+          "entities": [
+            {
+              "code": "order-themes",
+              "title": "Темы заказов",
+              "permissionKey": "dictionary:codes:order-themes",
+              "icon": "pi pi-tags",
+              "description": "Темы заказов",
+              "link": "/engine/entity/order-themes"
+            },
+            {
+              "code": "okved-codes",
+              "title": "Коды ОКВЭД",
+              "permissionKey": "dictionary:codes:okved-codes",
+              "icon": "pi pi-list",
+              "description": "Коды ОКВЭД",
+              "link": "/engine/entity/okved-codes"
+            },
+            {
+              "code": "product-shpz",
+              "title": "ШПЗ изделий",
+              "permissionKey": "dictionary:codes:product-shpz",
+              "icon": "pi pi-list",
+              "description": "ШПЗ изделий",
+              "link": "/engine/entity/product-shpz"
+            },
+            {
+              "code": "shpz-codes-setup",
+              "title": "Настройка кодов ШПЗ",
+              "permissionKey": "dictionary:codes:shpz-codes-setup",
+              "icon": "pi pi-cog",
+              "description": "Настройка ШПЗ",
+              "link": "/engine/entity/shpz-codes-setup"
+            },
+            {
+              "code": "production-types",
+              "title": "Виды производства",
+              "permissionKey": "dictionary:codes:production-types",
+              "icon": "pi pi-tags",
+              "description": "Виды производства",
+              "link": "/engine/entity/production-types"
+            },
+            {
+              "code": "order-types",
+              "title": "Виды заказов",
+              "permissionKey": "dictionary:codes:order-types",
+              "icon": "pi pi-tags",
+              "description": "Виды заказов",
+              "link": "/engine/entity/order-types"
+            },
+            {
+              "code": "product-types",
+              "title": "Виды продукции",
+              "permissionKey": "dictionary:codes:product-types",
+              "icon": "pi pi-tags",
+              "description": "Виды продукции",
+              "link": "/engine/entity/product-types"
+            },
+            {
+              "code": "order-type-codes",
+              "title": "Типы заказов",
+              "permissionKey": "dictionary:codes:order-type-codes",
+              "icon": "pi pi-tags",
+              "description": "Типы заказов",
+              "link": "/engine/entity/order-type-codes"
+            },
+            {
+              "code": "order-batch-grounds",
+              "title": "Основания партий заказа",
+              "permissionKey": "dictionary:codes:order-batch-grounds",
+              "icon": "pi pi-list",
+              "description": "Основания партий заказа",
+              "link": "/engine/entity/order-batch-grounds"
+            },
+            {
+              "code": "order-specialization-codes",
+              "title": "Коды специализации заказа",
+              "permissionKey": "dictionary:codes:order-specialization-codes",
+              "icon": "pi pi-list",
+              "description": "Коды специализации",
+              "link": "/engine/entity/order-specialization-codes"
+            }
+          ]
+        },
+        {
+          "code": "accounting",
+          "title": "Бухгалтерия",
+          "entities": [
+            {
+              "code": "balance-accounts",
+              "title": "Балансовые счета",
+              "permissionKey": "dictionary:accounting:balance-accounts",
+              "icon": "pi pi-table",
+              "description": "Балансовые счета",
+              "link": "/engine/entity/balance-accounts"
+            },
+            {
+              "code": "accounting-operations",
+              "title": "Бухгалтерские операции",
+              "permissionKey": "dictionary:accounting:accounting-operations",
+              "icon": "pi pi-list",
+              "description": "Бухгалтерские операции",
+              "link": "/engine/entity/accounting-operations"
+            },
+            {
+              "code": "correction-entries",
+              "title": "Корректные проводки",
+              "permissionKey": "dictionary:accounting:correction-entries",
+              "icon": "pi pi-list",
+              "description": "Корректные проводки",
+              "link": "/engine/entity/correction-entries"
+            },
+            {
+              "code": "cost-items",
+              "title": "Статьи затрат",
+              "permissionKey": "dictionary:accounting:cost-items",
+              "icon": "pi pi-list",
+              "description": "Статьи затрат",
+              "link": "/engine/entity/cost-items"
+            },
+            {
+              "code": "vat-rates",
+              "title": "Ставки НДС",
+              "permissionKey": "dictionary:accounting:vat-rates",
+              "icon": "pi pi-percentage",
+              "description": "Ставки НДС",
+              "link": "/engine/entity/vat-rates"
+            }
+          ]
+        },
+        {
+          "code": "other",
+          "title": "Прочие",
+          "entities": [
+            {
+              "code": "documents",
+              "title": "Документы",
+              "permissionKey": "dictionary:other:documents",
+              "icon": "pi pi-file",
+              "description": "Документы",
+              "link": "/engine/entity/documents"
+            },
+            {
+              "code": "standards",
+              "title": "Стандарты",
+              "permissionKey": "dictionary:other:standards",
+              "icon": "pi pi-file",
+              "description": "Стандарты",
+              "link": "/engine/entity/standards"
+            },
+            {
+              "code": "document-names",
+              "title": "Наименования документов",
+              "permissionKey": "dictionary:other:document-names",
+              "icon": "pi pi-list",
+              "description": "Наименования документов",
+              "link": "/engine/entity/document-names"
+            },
+            {
+              "code": "additional-units",
+              "title": "Дополнительные ЕИ",
+              "permissionKey": "dictionary:other:additional-units",
+              "icon": "pi pi-calculator",
+              "description": "Дополнительные единицы измерения",
+              "link": "/engine/entity/additional-units"
+            },
+            {
+              "code": "equipment-catalog",
+              "title": "Оборудование",
+              "permissionKey": "dictionary:other:equipment-catalog",
+              "icon": "pi pi-desktop",
+              "description": "Оборудование",
+              "link": "/engine/entity/equipment-catalog"
+            },
+            {
+              "code": "tooling-instruments",
+              "title": "Оснастка/Инструмент",
+              "permissionKey": "dictionary:other:tooling-instruments",
+              "icon": "pi pi-wrench",
+              "description": "Оснастка и инструмент",
+              "link": "/engine/entity/tooling-instruments"
+            },
+            {
+              "code": "additional-info",
+              "title": "Допинформация",
+              "permissionKey": "dictionary:other:additional-info",
+              "icon": "pi pi-info-circle",
+              "description": "Дополнительная информация",
+              "link": "/engine/entity/additional-info"
+            },
+            {
+              "code": "main-materials",
+              "title": "Материалы основные",
+              "permissionKey": "dictionary:other:main-materials",
+              "icon": "pi pi-database",
+              "description": "Основные материалы",
+              "link": "/engine/entity/main-materials"
+            },
+            {
+              "code": "aux-materials",
+              "title": "Материалы вспомогательные",
+              "permissionKey": "dictionary:other:aux-materials",
+              "icon": "pi pi-database",
+              "description": "Вспомогательные материалы",
+              "link": "/engine/entity/aux-materials"
+            },
+            {
+              "code": "materials-by-cd",
+              "title": "Материалы по КД",
+              "permissionKey": "dictionary:other:materials-by-cd",
+              "icon": "pi pi-database",
+              "description": "Материалы по КД",
+              "link": "/engine/entity/materials-by-cd"
+            },
+            {
+              "code": "other-products",
+              "title": "Прочие изделия",
+              "permissionKey": "dictionary:other:other-products",
+              "icon": "pi pi-box",
+              "description": "Прочие изделия",
+              "link": "/engine/entity/other-products"
+            },
+            {
+              "code": "standard-products",
+              "title": "Стандартные изделия",
+              "permissionKey": "dictionary:other:standard-products",
+              "icon": "pi pi-box",
+              "description": "Стандартные изделия",
+              "link": "/engine/entity/standard-products"
+            },
+            {
+              "code": "countries-cities",
+              "title": "Страны и населенные пункты",
+              "permissionKey": "dictionary:other:countries-cities",
+              "icon": "pi pi-globe",
+              "description": "Страны и населенные пункты",
+              "link": "/engine/entity/countries-cities"
+            },
+            {
+              "code": "contract-types",
+              "title": "Типы договоров",
+              "permissionKey": "dictionary:other:contract-types",
+              "icon": "pi pi-tags",
+              "description": "Типы договоров",
+              "link": "/engine/entity/contract-types"
+            },
+            {
+              "code": "cancel-reasons",
+              "title": "Причины аннулирования",
+              "permissionKey": "dictionary:other:cancel-reasons",
+              "icon": "pi pi-list",
+              "description": "Причины аннулирования",
+              "link": "/engine/entity/cancel-reasons"
+            },
+            {
+              "code": "suspend-reasons",
+              "title": "Причины приостановки",
+              "permissionKey": "dictionary:other:suspend-reasons",
+              "icon": "pi pi-list",
+              "description": "Причины приостановки",
+              "link": "/engine/entity/suspend-reasons"
+            },
+            {
+              "code": "resume-reasons",
+              "title": "Причины возобновления",
+              "permissionKey": "dictionary:other:resume-reasons",
+              "icon": "pi pi-list",
+              "description": "Причины возобновления",
+              "link": "/engine/entity/resume-reasons"
+            },
+            {
+              "code": "cancel-stage-reasons",
+              "title": "Причины отмены закрытия этапов ПП",
+              "permissionKey": "dictionary:other:cancel-stage-reasons",
+              "icon": "pi pi-list",
+              "description": "Отмена закрытия этапов",
+              "link": "/engine/entity/cancel-stage-reasons"
+            },
+            {
+              "code": "labor-deviation-reasons",
+              "title": "Причины отклонения трудоемкости",
+              "permissionKey": "dictionary:other:labor-deviation-reasons",
+              "icon": "pi pi-list",
+              "description": "Отклонения трудоемкости",
+              "link": "/engine/entity/labor-deviation-reasons"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "service",
+      "title": "Сервис",
+      "icon": "pi pi-wrench",
+      "contexts": [
+        {
+          "code": "selections",
+          "title": "Выборки",
+          "entities": [
+            {
+              "code": "locality-select",
+              "title": "Выбор населенного пункта",
+              "permissionKey": "service:selections:locality-select",
+              "icon": "pi pi-search",
+              "description": "Выбор населенного пункта",
+              "link": "/engine/entity/locality-select"
+            },
+            {
+              "code": "cancel-reason-select",
+              "title": "Выбор причины аннулирования",
+              "permissionKey": "service:selections:cancel-reason-select",
+              "icon": "pi pi-search",
+              "description": "Выбор причины аннулирования",
+              "link": "/engine/entity/cancel-reason-select"
+            },
+            {
+              "code": "structural-element-select",
+              "title": "Выбор структурного элемента",
+              "permissionKey": "service:selections:structural-element-select",
+              "icon": "pi pi-search",
+              "description": "Выбор структурного элемента",
+              "link": "/engine/entity/structural-element-select"
+            },
+            {
+              "code": "route-element-select",
+              "title": "Выбор элемента маршрута",
+              "permissionKey": "service:selections:route-element-select",
+              "icon": "pi pi-search",
+              "description": "Выбор элемента маршрута",
+              "link": "/engine/entity/route-element-select"
+            },
+            {
+              "code": "material-select",
+              "title": "Выбор материала",
+              "permissionKey": "service:selections:material-select",
+              "icon": "pi pi-search",
+              "description": "Выбор материала",
+              "link": "/engine/entity/material-select"
+            },
+            {
+              "code": "route-select",
+              "title": "Выбор маршрута",
+              "permissionKey": "service:selections:route-select",
+              "icon": "pi pi-search",
+              "description": "Выбор маршрута",
+              "link": "/engine/entity/route-select"
+            },
+            {
+              "code": "blank-select",
+              "title": "Выбор заготовок",
+              "permissionKey": "service:selections:blank-select",
+              "icon": "pi pi-search",
+              "description": "Выбор заготовок",
+              "link": "/engine/entity/blank-select"
+            },
+            {
+              "code": "brigade-select",
+              "title": "Выбор бригад",
+              "permissionKey": "service:selections:brigade-select",
+              "icon": "pi pi-search",
+              "description": "Выбор бригад",
+              "link": "/engine/entity/brigade-select"
+            },
+            {
+              "code": "order-select",
+              "title": "Выбор заказа",
+              "permissionKey": "service:selections:order-select",
+              "icon": "pi pi-search",
+              "description": "Выбор заказа",
+              "link": "/engine/entity/order-select"
+            },
+            {
+              "code": "material-request-select",
+              "title": "Выбор требования на получ.мат.",
+              "permissionKey": "service:selections:material-request-select",
+              "icon": "pi pi-search",
+              "description": "Выбор требования на получение материалов",
+              "link": "/engine/entity/material-request-select"
+            },
+            {
+              "code": "component-request-select",
+              "title": "Выбор заявки на комплектующие",
+              "permissionKey": "service:selections:component-request-select",
+              "icon": "pi pi-search",
+              "description": "Выбор заявки на комплектующие",
+              "link": "/engine/entity/component-request-select"
+            },
+            {
+              "code": "storage-place-select",
+              "title": "Выбор места хранения",
+              "permissionKey": "service:selections:storage-place-select",
+              "icon": "pi pi-search",
+              "description": "Выбор места хранения",
+              "link": "/engine/entity/storage-place-select"
+            },
+            {
+              "code": "inventory-select",
+              "title": "Выбор инвентаризации",
+              "permissionKey": "service:selections:inventory-select",
+              "icon": "pi pi-search",
+              "description": "Выбор инвентаризации",
+              "link": "/engine/entity/inventory-select"
+            },
+            {
+              "code": "contract-select",
+              "title": "Выбор договора",
+              "permissionKey": "service:selections:contract-select",
+              "icon": "pi pi-search",
+              "description": "Выбор договора",
+              "link": "/engine/entity/contract-select"
+            },
+            {
+              "code": "accounting-op-select",
+              "title": "Выбор бухоперации",
+              "permissionKey": "service:selections:accounting-op-select",
+              "icon": "pi pi-search",
+              "description": "Выбор бухоперации",
+              "link": "/engine/entity/accounting-op-select"
+            },
+            {
+              "code": "dsе-batch-select",
+              "title": "Выбор партии ДСЕ",
+              "permissionKey": "service:selections:dsе-batch-select",
+              "icon": "pi pi-search",
+              "description": "Выбор партии ДСЕ",
+              "link": "/engine/entity/dsе-batch-select"
+            },
+            {
+              "code": "heat-treatment-select",
+              "title": "Выбор термообработки",
+              "permissionKey": "service:selections:heat-treatment-select",
+              "icon": "pi pi-search",
+              "description": "Выбор термообработки",
+              "link": "/engine/entity/heat-treatment-select"
+            },
+            {
+              "code": "coating-select",
+              "title": "Выбор покрытия",
+              "permissionKey": "service:selections:coating-select",
+              "icon": "pi pi-search",
+              "description": "Выбор покрытия",
+              "link": "/engine/entity/coating-select"
+            },
+            {
+              "code": "ng-select",
+              "title": "Выбор НГ",
+              "permissionKey": "service:selections:ng-select",
+              "icon": "pi pi-search",
+              "description": "Выбор НГ",
+              "link": "/engine/entity/ng-select"
+            },
+            {
+              "code": "product-nomenclature-select",
+              "title": "Выбор номенклатуры (изделий)",
+              "permissionKey": "service:selections:product-nomenclature-select",
+              "icon": "pi pi-search",
+              "description": "Выбор номенклатуры изделий",
+              "link": "/engine/entity/product-nomenclature-select"
+            },
+            {
+              "code": "dsе-nomenclature-select",
+              "title": "Выбор номенклатуры (ДСЕ)",
+              "permissionKey": "service:selections:dsе-nomenclature-select",
+              "icon": "pi pi-search",
+              "description": "Выбор номенклатуры ДСЕ",
+              "link": "/engine/entity/dsе-nomenclature-select"
+            },
+            {
+              "code": "material-nomenclature-select",
+              "title": "Выбор номенклатуры (материалы)",
+              "permissionKey": "service:selections:material-nomenclature-select",
+              "icon": "pi pi-search",
+              "description": "Выбор номенклатуры материалов",
+              "link": "/engine/entity/material-nomenclature-select"
+            },
+            {
+              "code": "nomenclature-batch-select",
+              "title": "Выбор партии номенклатуры",
+              "permissionKey": "service:selections:nomenclature-batch-select",
+              "icon": "pi pi-search",
+              "description": "Выбор партии номенклатуры",
+              "link": "/engine/entity/nomenclature-batch-select"
+            },
+            {
+              "code": "order-batch-select",
+              "title": "Выбор партии заказа",
+              "permissionKey": "service:selections:order-batch-select",
+              "icon": "pi pi-search",
+              "description": "Выбор партии заказа",
+              "link": "/engine/entity/order-batch-select"
+            },
+            {
+              "code": "sl-select",
+              "title": "Выбор СЛ",
+              "permissionKey": "service:selections:sl-select",
+              "icon": "pi pi-search",
+              "description": "Выбор сопроводительного листа",
+              "link": "/engine/entity/sl-select"
+            },
+            {
+              "code": "worker-select",
+              "title": "Выбор работников",
+              "permissionKey": "service:selections:worker-select",
+              "icon": "pi pi-search",
+              "description": "Выбор работников",
+              "link": "/engine/entity/worker-select"
+            },
+            {
+              "code": "settlement-account-select",
+              "title": "Выбор расчетного счета",
+              "permissionKey": "service:selections:settlement-account-select",
+              "icon": "pi pi-search",
+              "description": "Выбор расчетного счета",
+              "link": "/engine/entity/settlement-account-select"
+            },
+            {
+              "code": "settlement-period-select",
+              "title": "Выбор расчетного периода",
+              "permissionKey": "service:selections:settlement-period-select",
+              "icon": "pi pi-search",
+              "description": "Выбор расчетного периода",
+              "link": "/engine/entity/settlement-period-select"
+            },
+            {
+              "code": "payment-doc-select",
+              "title": "Выбор документов на оплату",
+              "permissionKey": "service:selections:payment-doc-select",
+              "icon": "pi pi-search",
+              "description": "Выбор документов на оплату",
+              "link": "/engine/entity/payment-doc-select"
+            },
+            {
+              "code": "counterparty-select",
+              "title": "Выбор контрагентов",
+              "permissionKey": "service:selections:counterparty-select",
+              "icon": "pi pi-search",
+              "description": "Выбор контрагентов",
+              "link": "/engine/entity/counterparty-select"
+            },
+            {
+              "code": "precious-metals-select",
+              "title": "Выбор драгметаллов",
+              "permissionKey": "service:selections:precious-metals-select",
+              "icon": "pi pi-search",
+              "description": "Выбор драгметаллов",
+              "link": "/engine/entity/precious-metals-select"
+            },
+            {
+              "code": "worker-card-select",
+              "title": "Выбор карточки работников",
+              "permissionKey": "service:selections:worker-card-select",
+              "icon": "pi pi-search",
+              "description": "Выбор карточки работников",
+              "link": "/engine/entity/worker-card-select"
+            },
+            {
+              "code": "plan-select",
+              "title": "Выбор планов",
+              "permissionKey": "service:selections:plan-select",
+              "icon": "pi pi-search",
+              "description": "Выбор планов",
+              "link": "/engine/entity/plan-select"
+            },
+            {
+              "code": "department-select",
+              "title": "Выбор подразделений",
+              "permissionKey": "service:selections:department-select",
+              "icon": "pi pi-search",
+              "description": "Выбор подразделений",
+              "link": "/engine/entity/department-select"
+            },
+            {
+              "code": "warehouse-select",
+              "title": "Выбор складов",
+              "permissionKey": "service:selections:warehouse-select",
+              "icon": "pi pi-search",
+              "description": "Выбор складов",
+              "link": "/engine/entity/warehouse-select"
+            },
+            {
+              "code": "dsе-select",
+              "title": "Выбор ДСЕ",
+              "permissionKey": "service:selections:dsе-select",
+              "icon": "pi pi-search",
+              "description": "Выбор ДСЕ",
+              "link": "/engine/entity/dsе-select"
+            },
+            {
+              "code": "region-select",
+              "title": "Выбор региона",
+              "permissionKey": "service:selections:region-select",
+              "icon": "pi pi-search",
+              "description": "Выбор региона",
+              "link": "/engine/entity/region-select"
+            }
+          ]
+        },
+        {
+          "code": "examples",
+          "title": "Примеры",
+          "entities": [
+            {
+              "code": "http-requests",
+              "title": "httpRequests",
+              "permissionKey": "service:examples:http-requests",
+              "icon": "pi pi-bolt",
+              "description": "Пример HTTP-запросов",
+              "link": "/engine/entity/http-requests"
+            },
+            {
+              "code": "messaging-api",
+              "title": "MessagingAPI",
+              "permissionKey": "service:examples:messaging-api",
+              "icon": "pi pi-bolt",
+              "description": "Пример работы с MessagingAPI",
+              "link": "/engine/entity/messaging-api"
+            },
+            {
+              "code": "charts",
+              "title": "Charts",
+              "permissionKey": "service:examples:charts",
+              "icon": "pi pi-chart-bar",
+              "description": "Пример графиков",
+              "link": "/engine/entity/charts"
+            },
+            {
+              "code": "top-token-edit",
+              "title": "Пример работы с TOPPTokenEdit",
+              "permissionKey": "service:examples:top-token-edit",
+              "icon": "pi pi-bolt",
+              "description": "Пример TOPPTokenEdit",
+              "link": "/engine/entity/top-token-edit"
+            },
+            {
+              "code": "repository-items-demo",
+              "title": "repositoryItemsDemo",
+              "permissionKey": "service:examples:repository-items-demo",
+              "icon": "pi pi-bolt",
+              "description": "Пример repositoryItems",
+              "link": "/engine/entity/repository-items-demo"
+            },
+            {
+              "code": "vertical-grid-demo",
+              "title": "verticalGridDemo",
+              "permissionKey": "service:examples:vertical-grid-demo",
+              "icon": "pi pi-table",
+              "description": "Пример вертикального грида",
+              "link": "/engine/entity/vertical-grid-demo"
+            },
+            {
+              "code": "send-email",
+              "title": "SendEmail",
+              "permissionKey": "service:examples:send-email",
+              "icon": "pi pi-envelope",
+              "description": "Пример отправки email",
+              "link": "/engine/entity/send-email"
+            },
+            {
+              "code": "dll-invocation",
+              "title": "Вызов динамических библиотек (dll)",
+              "permissionKey": "service:examples:dll-invocation",
+              "icon": "pi pi-bolt",
+              "description": "Пример вызова DLL",
+              "link": "/engine/entity/dll-invocation"
+            },
+            {
+              "code": "top-grid-demo",
+              "title": "Пример работы с TOPPGrid",
+              "permissionKey": "service:examples:top-grid-demo",
+              "icon": "pi pi-table",
+              "description": "Пример TOPPGrid",
+              "link": "/engine/entity/top-grid-demo"
+            },
+            {
+              "code": "grid-demo",
+              "title": "Пример работы с гридом",
+              "permissionKey": "service:examples:grid-demo",
+              "icon": "pi pi-table",
+              "description": "Пример работы с гридом",
+              "link": "/engine/entity/grid-demo"
+            },
+            {
+              "code": "threads-demo",
+              "title": "Пример работы с потоками",
+              "permissionKey": "service:examples:threads-demo",
+              "icon": "pi pi-bolt",
+              "description": "Пример работы с потоками",
+              "link": "/engine/entity/threads-demo"
+            },
+            {
+              "code": "tree-list-demo",
+              "title": "Работа с TcxTreeList",
+              "permissionKey": "service:examples:tree-list-demo",
+              "icon": "pi pi-map",
+              "description": "Пример работы с деревом",
+              "link": "/engine/entity/tree-list-demo"
+            },
+            {
+              "code": "com-ole-demo",
+              "title": "Работа с COM|OLE",
+              "permissionKey": "service:examples:com-ole-demo",
+              "icon": "pi pi-bolt",
+              "description": "Пример COM/OLE",
+              "link": "/engine/entity/com-ole-demo"
+            },
+            {
+              "code": "uts-integration",
+              "title": "Интеграция с УТС",
+              "permissionKey": "service:examples:uts-integration",
+              "icon": "pi pi-share-alt",
+              "description": "Интеграция с УТС",
+              "link": "/engine/entity/uts-integration"
+            },
+            {
+              "code": "1c-integration",
+              "title": "Интеграция с 1С",
+              "permissionKey": "service:examples:1c-integration",
+              "icon": "pi pi-share-alt",
+              "description": "Интеграция с 1С",
+              "link": "/engine/entity/1c-integration"
+            },
+            {
+              "code": "opp-controls-new",
+              "title": "Новое в OPPControls (GS2018SP1)",
+              "permissionKey": "service:examples:opp-controls-new",
+              "icon": "pi pi-bolt",
+              "description": "Новое в OPPControls",
+              "link": "/engine/entity/opp-controls-new"
+            }
+          ]
+        },
+        {
+          "code": "modules",
+          "title": "Модули",
+          "entities": [
+            {
+              "code": "common-modules-1",
+              "title": "Общие модули",
+              "permissionKey": "service:modules:common-modules-1",
+              "icon": "pi pi-cog",
+              "description": "Общие модули",
+              "link": "/engine/entity/common-modules-1"
+            },
+            {
+              "code": "events",
+              "title": "События",
+              "permissionKey": "service:modules:events",
+              "icon": "pi pi-bolt",
+              "description": "События",
+              "link": "/engine/entity/events"
+            }
+          ]
+        },
+        {
+          "code": "development",
+          "title": "Разработка",
+          "entities": [
+            {
+              "code": "common-modules-2",
+              "title": "Общие модули",
+              "permissionKey": "service:development:common-modules-2",
+              "icon": "pi pi-cog",
+              "description": "Общие модули",
+              "link": "/engine/entity/common-modules-2"
+            },
+            {
+              "code": "implementation",
+              "title": "Реализация",
+              "permissionKey": "service:development:implementation",
+              "icon": "pi pi-cog",
+              "description": "Реализация",
+              "link": "/engine/entity/implementation"
+            },
+            {
+              "code": "examples-list",
+              "title": "Примеры",
+              "permissionKey": "service:development:examples-list",
+              "icon": "pi pi-bolt",
+              "description": "Примеры",
+              "link": "/engine/entity/examples-list"
+            },
+            {
+              "code": "trs-production-worker",
+              "title": "ТРС производственного рабочего (базовый)",
+              "permissionKey": "service:development:trs-production-worker",
+              "icon": "pi pi-user-plus",
+              "description": "ТРС производственного рабочего",
+              "link": "/engine/entity/trs-production-worker"
+            },
+            {
+              "code": "trs-by-sl",
+              "title": "ТРС по СЛ",
+              "permissionKey": "service:development:trs-by-sl",
+              "icon": "pi pi-user-plus",
+              "description": "ТРС по сопроводительному листу",
+              "link": "/engine/entity/trs-by-sl"
+            },
+            {
+              "code": "memgraph-query",
+              "title": "MemGraph: просмотр запросов",
+              "permissionKey": "service:development:memgraph-query",
+              "icon": "pi pi-share-alt",
+              "description": "Выполнение Cypher-запросов и визуализация графа",
+              "link": "/tools/memgraph"
+            },
+            {
+              "code": "service-monitor",
+              "title": "Монитор служб",
+              "permissionKey": "service:development:service-monitor",
+              "icon": "pi pi-desktop",
+              "description": "Состояние внешних сервисов: memgraph, backend, auth",
+              "link": "/tools/services"
+            }
+          ]
+        },
+        {
+          "code": "import-sync",
+          "title": "Импорт/Синхронизация",
+          "entities": [
+            {
+              "code": "sync-bo-locman",
+              "title": "Синхронизация БО с БД ЛОЦМАН",
+              "permissionKey": "service:import-sync:sync-bo-locman",
+              "icon": "pi pi-sync",
+              "description": "Синхронизация с ЛОЦМАН",
+              "link": "/engine/entity/sync-bo-locman"
+            },
+            {
+              "code": "dept-structure-correction",
+              "title": "Корректировка структуры подразделений",
+              "permissionKey": "service:import-sync:dept-structure-correction",
+              "icon": "pi pi-map",
+              "description": "Корректировка подразделений",
+              "link": "/engine/entity/dept-structure-correction"
+            },
+            {
+              "code": "import-examples",
+              "title": "Примеры импортов",
+              "permissionKey": "service:import-sync:import-examples",
+              "icon": "pi pi-upload",
+              "description": "Примеры импортов",
+              "link": "/engine/entity/import-examples"
+            },
+            {
+              "code": "import-xml",
+              "title": "Импорт из XML",
+              "permissionKey": "service:import-sync:import-xml",
+              "icon": "pi pi-upload",
+              "description": "Импорт из XML",
+              "link": "/engine/entity/import-xml"
+            },
+            {
+              "code": "import-entries",
+              "title": "Импорт проводок",
+              "permissionKey": "service:import-sync:import-entries",
+              "icon": "pi pi-upload",
+              "description": "Импорт проводок",
+              "link": "/engine/entity/import-entries"
+            },
+            {
+              "code": "import-cost-codes",
+              "title": "Импорт шифров затрат (ПЗ)",
+              "permissionKey": "service:import-sync:import-cost-codes",
+              "icon": "pi pi-upload",
+              "description": "Импорт шифров затрат",
+              "link": "/engine/entity/import-cost-codes"
+            },
+            {
+              "code": "import-dept-docs",
+              "title": "Импорт документов по цехам",
+              "permissionKey": "service:import-sync:import-dept-docs",
+              "icon": "pi pi-upload",
+              "description": "Импорт документов по цехам",
+              "link": "/engine/entity/import-dept-docs"
+            },
+            {
+              "code": "import-operations",
+              "title": "Импорт операций",
+              "permissionKey": "service:import-sync:import-operations",
+              "icon": "pi pi-upload",
+              "description": "Импорт операций",
+              "link": "/engine/entity/import-operations"
+            },
+            {
+              "code": "import-warehouses",
+              "title": "Импорт складов/кладовых",
+              "permissionKey": "service:import-sync:import-warehouses",
+              "icon": "pi pi-upload",
+              "description": "Импорт складов",
+              "link": "/engine/entity/import-warehouses"
+            },
+            {
+              "code": "import-warehouse-docs",
+              "title": "Импорт документов по складам",
+              "permissionKey": "service:import-sync:import-warehouse-docs",
+              "icon": "pi pi-upload",
+              "description": "Импорт документов по складам",
+              "link": "/engine/entity/import-warehouse-docs"
+            },
+            {
+              "code": "import-precious-metals",
+              "title": "Импорт драгметаллов",
+              "permissionKey": "service:import-sync:import-precious-metals",
+              "icon": "pi pi-upload",
+              "description": "Импорт драгметаллов",
+              "link": "/engine/entity/import-precious-metals"
+            },
+            {
+              "code": "import-balances",
+              "title": "Импорт остатков",
+              "permissionKey": "service:import-sync:import-balances",
+              "icon": "pi pi-upload",
+              "description": "Импорт остатков",
+              "link": "/engine/entity/import-balances"
+            },
+            {
+              "code": "import-schedules",
+              "title": "Импорт графиков",
+              "permissionKey": "service:import-sync:import-schedules",
+              "icon": "pi pi-upload",
+              "description": "Импорт графиков",
+              "link": "/engine/entity/import-schedules"
+            },
+            {
+              "code": "import-nom-assembly",
+              "title": "Импорт НомКомплектации",
+              "permissionKey": "service:import-sync:import-nom-assembly",
+              "icon": "pi pi-upload",
+              "description": "Импорт номенклатуры комплектации",
+              "link": "/engine/entity/import-nom-assembly"
+            },
+            {
+              "code": "import-nom-materials",
+              "title": "Импорт НомМатериалов",
+              "permissionKey": "service:import-sync:import-nom-materials",
+              "icon": "pi pi-upload",
+              "description": "Импорт номенклатуры материалов",
+              "link": "/engine/entity/import-nom-materials"
+            },
+            {
+              "code": "import-nom-dsе",
+              "title": "Импорт НомДСЕ",
+              "permissionKey": "service:import-sync:import-nom-dsе",
+              "icon": "pi pi-upload",
+              "description": "Импорт номенклатуры ДСЕ",
+              "link": "/engine/entity/import-nom-dsе"
+            }
+          ]
+        },
+        {
+          "code": "processings",
+          "title": "Обработки",
+          "entities": [
+            {
+              "code": "group-changes-dsе",
+              "title": "Групповые изменения ПДСЕ",
+              "permissionKey": "service:processings:group-changes-dsе",
+              "icon": "pi pi-pencil",
+              "description": "Групповые изменения ПДСЕ",
+              "link": "/engine/entity/group-changes-dsе"
+            },
+            {
+              "code": "batch-posting",
+              "title": "Пакетное проведение документов",
+              "permissionKey": "service:processings:batch-posting",
+              "icon": "pi pi-cog",
+              "description": "Пакетное проведение",
+              "link": "/engine/entity/batch-posting"
+            },
+            {
+              "code": "spec-update-v8",
+              "title": "Обновить ПСп до v8",
+              "permissionKey": "service:processings:spec-update-v8",
+              "icon": "pi pi-sync",
+              "description": "Обновление ПСп",
+              "link": "/engine/entity/spec-update-v8"
+            },
+            {
+              "code": "create-empty-db",
+              "title": "Сделать пустую БД",
+              "permissionKey": "service:processings:create-empty-db",
+              "icon": "pi pi-database",
+              "description": "Создание пустой БД",
+              "link": "/engine/entity/create-empty-db"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

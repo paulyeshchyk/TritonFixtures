@@ -1,0 +1,61 @@
+{
+  "layout": {
+    "id": 22020,
+    "actionId": 20011,
+    "action": null,
+    "name": "Заказы на склад",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 22021,
+      "name": "Заказы на склад",
+      "alias": "list-orders-stock",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_os_list_1",
+          "caption": "Номер",
+          "fieldType": "string",
+          "columnNumber": 1,
+          "attributeMapping": "number"
+        },
+        {
+          "name": "field_os_list_2",
+          "caption": "Партия",
+          "fieldType": "string",
+          "columnNumber": 2,
+          "attributeMapping": "batch"
+        },
+        {
+          "name": "field_os_list_3",
+          "caption": "План. дата",
+          "fieldType": "date",
+          "columnNumber": 3,
+          "attributeMapping": "plannedDate"
+        },
+        {
+          "name": "field_os_list_4",
+          "caption": "Сумма",
+          "fieldType": "numeric",
+          "columnNumber": 4,
+          "attributeMapping": "amount"
+        },
+        {
+          "name": "field_os_list_5",
+          "caption": "Статус",
+          "fieldType": "string",
+          "columnNumber": 5,
+          "attributeMapping": "status"
+        }
+      ],
+      "children": [],
+      "sortOrder": 1,
+      "targetEntity": "production:production-orders-stock:production-orders-stock"
+    }
+  ],
+  "values": []
+}

@@ -1,0 +1,61 @@
+{
+  "layout": {
+    "id": 21100,
+    "actionId": 20100,
+    "action": null,
+    "name": "Карточки работников",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 21910,
+      "name": "Карточки работников",
+      "alias": "list-20100",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_wc_list_1",
+          "caption": "Номер",
+          "fieldType": "string",
+          "columnNumber": 1,
+          "attributeMapping": "number"
+        },
+        {
+          "name": "field_wc_list_2",
+          "caption": "Открыта",
+          "fieldType": "date",
+          "columnNumber": 2,
+          "attributeMapping": "openedAt"
+        },
+        {
+          "name": "field_wc_list_3",
+          "caption": "Закрыта",
+          "fieldType": "date",
+          "columnNumber": 3,
+          "attributeMapping": "closedAt"
+        },
+        {
+          "name": "field_wc_list_4",
+          "caption": "Статус",
+          "fieldType": "string",
+          "columnNumber": 4,
+          "attributeMapping": "status"
+        },
+        {
+          "name": "field_wc_list_5",
+          "caption": "Примечание",
+          "fieldType": "string",
+          "columnNumber": 5,
+          "attributeMapping": "notes"
+        }
+      ],
+      "children": [],
+      "sortOrder": 1,
+      "targetEntity": "personnel:workers:worker-cards"
+    }
+  ],
+  "values": []
+}

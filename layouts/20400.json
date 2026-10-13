@@ -1,0 +1,47 @@
+{
+  "layout": {
+    "id": 21400,
+    "actionId": 20400,
+    "action": null,
+    "name": "Темы заказов",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 21940,
+      "name": "Темы заказов",
+      "alias": "list-20400",
+      "spaceType": "table",
+      "spaceRole": "input",
+      "fields": [
+        {
+          "name": "field_ot_list_1",
+          "caption": "Код",
+          "fieldType": "string",
+          "columnNumber": 1,
+          "attributeMapping": "code"
+        },
+        {
+          "name": "field_ot_list_2",
+          "caption": "Название",
+          "fieldType": "string",
+          "columnNumber": 2,
+          "attributeMapping": "name"
+        },
+        {
+          "name": "field_ot_list_3",
+          "caption": "Статус",
+          "fieldType": "string",
+          "columnNumber": 3,
+          "attributeMapping": "status"
+        }
+      ],
+      "children": [],
+      "sortOrder": 1,
+      "targetEntity": "dictionary:codes:order-themes"
+    }
+  ],
+  "values": []
+}

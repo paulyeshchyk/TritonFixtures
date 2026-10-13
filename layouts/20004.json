@@ -1,0 +1,91 @@
+{
+  "layout": {
+    "id": 21004,
+    "actionId": 20004,
+    "action": null,
+    "name": "Подразделение",
+    "description": "",
+    "access_Level": 0,
+    "layoutType": 1
+  },
+  "spaces": [
+    {
+      "id": 25000,
+      "name": "Подразделение",
+      "alias": "department-root",
+      "spaceType": "tab",
+      "spaceRole": "input",
+      "fields": [],
+      "children": [
+        {
+          "id": 25001,
+          "name": "Параметры",
+          "alias": "department-params",
+          "spaceType": "card",
+          "spaceRole": "input",
+          "fields": [
+            {
+              "name": "field_21004_25001_1",
+              "caption": "Код",
+              "fieldType": "string",
+              "columnNumber": 1,
+              "attributeMapping": "code"
+            },
+            {
+              "name": "field_21004_25001_2",
+              "caption": "Название",
+              "fieldType": "string",
+              "columnNumber": 2,
+              "attributeMapping": "name"
+            },
+            {
+              "name": "field_21004_25001_3",
+              "caption": "Активно",
+              "fieldType": "boolean",
+              "columnNumber": 3,
+              "attributeMapping": "isActive"
+            }
+          ],
+          "children": [],
+          "sortOrder": 1
+        }
+      ],
+      "sortOrder": 1
+    }
+  ],
+  "values": [
+    {
+      "fieldName": "field_21004_25001_1",
+      "value": "2/1",
+      "meta": {
+        "caption": "Код",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_21004_25001_2",
+      "value": "Производство",
+      "meta": {
+        "caption": "Название",
+        "fieldType": "string",
+        "visible": true,
+        "isRequired": true,
+        "readOnly": false
+      }
+    },
+    {
+      "fieldName": "field_21004_25001_3",
+      "value": true,
+      "meta": {
+        "caption": "Активно",
+        "fieldType": "boolean",
+        "visible": true,
+        "isRequired": false,
+        "readOnly": false
+      }
+    }
+  ]
+}
